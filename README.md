@@ -314,7 +314,7 @@ python comprehensive_statistical_analysis_v3.py \
 
 ### Detailed Guides
 - **[Usage Tutorial](USAGE.md)**: Step-by-step processing pipeline
-- **[Repository Structure](article_repo_structure.md)**: Detailed organization explanation
+- **[Repository Structure](repo_explanation_doc.md)**: Detailed organization explanation
 - **[Article Summary](p4_article_summary.docx)**: Comprehensive research overview
 
 ### Clinical Resources
