@@ -1,0 +1,368 @@
+
+    TOTAL LESION BURDEN ANALYSIS - COMPREHENSIVE DOCUMENTATION
+    ==========================================================
+
+    Generated on: 2025-09-18 13:01:49
+
+    OVERVIEW
+    --------
+    This analysis examines white matter hyperintensity (WMH) lesion burden in the brain 
+    comparing Healthy Controls (HC) and Multiple Sclerosis (MS) patients. The analysis 
+    includes both absolute WMH area measurements and normalized WMH ratios, stratified 
+    by age groups and gender.
+
+    FIGURE DESCRIPTION
+    ------------------
+    The figure consists of a 2x2 subplot layout:
+
+    Layout Structure:
+    - Top row: Healthy Controls (HC)
+    - Bottom row: Multiple Sclerosis (MS) patients
+    - Left column: Absolute WMH Area (mm²)
+    - Right column: WMH Ratio (%)
+
+    Subplot Details:
+    1. Top-Left: HC WMH Area
+    2. Top-Right: HC WMH Ratio  
+    3. Bottom-Left: MS WMH Area
+    4. Bottom-Right: MS WMH Ratio
+
+    VISUALIZATION METHOD
+    --------------------
+    Chart Type: Stacked Area Plot
+    - Each subplot uses stacked area charts to show gender-stratified data across age groups
+    - Male data (bottom layer): Fills from 0 to male mean value
+    - Female data (top layer): Fills from male mean to total (male + female) mean
+    - This visualization allows comparison of both absolute values and gender contributions
+
+    Color Scheme:
+    - Male data: #1f77b4 (alpha=0.7)
+    - Female data: #d62728 (alpha=0.7)
+
+    AGE STRATIFICATION
+    ------------------
+    Age Groups: 18-29, 30-39, 40-49, 50-59, 60+
+    Age Bins: [(18, 29), (30, 39), (40, 49), (50, 59), (60, 69)]
+    Age Centers (for plotting): ['23.5', '34.5', '44.5', '54.5', '64.5']
+
+    The analysis stratifies data across these age groups to examine age-related changes 
+    in lesion burden for both groups and genders.
+
+    METRICS ANALYZED
+    ----------------
+
+    1. WMH Area (mm²):
+       - Absolute measurement of total white matter hyperintensity volume
+       - Column: TotalWMHArea
+       - Units: Square millimeters (mm²)
+       - Clinical significance: Larger values indicate greater lesion burden
+
+    2. WMH Ratio (%):
+       - Normalized measurement relative to total brain area/volume
+       - Column: WMHRatio
+       - Units: Percentage (%)
+       - Clinical significance: Controls for individual brain size differences
+
+    CLINICAL CONTEXT
+    ----------------
+    White Matter Hyperintensities (WMH):
+    - Bright signal areas on T2-weighted and FLAIR MRI sequences
+    - Associated with small vessel disease, aging, and neurodegeneration
+    - In MS: May represent demyelination, inflammation, or tissue damage
+    - Age-related increase is normal but accelerated in pathological conditions
+
+    Expected Patterns:
+    - MS patients typically show higher WMH burden than healthy controls
+    - Age-related increase in WMH burden in both groups
+    - MS may show accelerated age-related progression
+    - Gender differences may exist in lesion development patterns
+
+    ADVANCED STATISTICAL APPROACH
+    ------------------------------
+    The analysis employs a sophisticated statistical testing framework:
+    
+    Normality Assessment:
+    - Shapiro-Wilk tests performed on both groups (HC and MS) for each metric
+    - Significance threshold: p < 0.05 indicates non-normal distribution
+    - Results inform choice between parametric and non-parametric tests
+    
+    Statistical Test Selection:
+    1. If both groups pass normality: Independent t-test (parametric)
+    2. If one or both groups fail normality: Mann-Whitney U test (non-parametric)
+    
+    Effect Size Calculations:
+    - Parametric tests: Cohen's d
+      * Small effect: d = 0.2
+      * Medium effect: d = 0.5  
+      * Large effect: d = 0.8
+    - Non-parametric tests: Effect size r (r = Z/√N)
+      * Small effect: r = 0.1
+      * Medium effect: r = 0.3
+      * Large effect: r = 0.5
+    
+    For each combination of:
+    - Group (HC vs MS)
+    - Age group (5 categories)
+    - Gender (Male vs Female)  
+    - Metric (Area vs Ratio)
+    
+    The following statistics are calculated:
+    - Sample size (N)
+    - Mean ± Standard Deviation
+    - Minimum and Maximum values
+    - Median values
+    - Interquartile ranges (for non-parametric reporting)
+    
+    STATISTICAL OUTPUT INTERPRETATION
+    ---------------------------------
+    
+    Parametric Results (t-test):
+    - Reports: Mean ± SD for both groups
+    - Test statistic: t-value and degrees of freedom
+    - p-value for significance testing
+    - Cohen's d for effect size magnitude
+    
+    Non-parametric Results (Mann-Whitney U):
+    - Reports: Mean ± SD AND Median [IQR] for both groups
+    - Test statistic: U-value (or equivalent Z-score)
+    - p-value for significance testing
+    - Effect size r for magnitude assessment
+    
+    Normality Test Results:
+    - Shapiro-Wilk p-values reported for each group
+    - p < 0.05 indicates significant departure from normality
+    - Informs test selection rationale
+
+    INTERPRETATION GUIDELINES
+    -------------------------
+
+    Stacked Area Plot Interpretation:
+    - Height of bottom layer = Male mean value
+    - Height of top layer = Female mean value  
+    - Total height = Combined mean (male + female means)
+    - Wider gaps between age points indicate larger differences
+    - Steeper slopes indicate rapid changes with age
+
+    Clinical Significance Thresholds:
+    - Minimal lesion burden: < 500 mm² (approximate)
+    - Mild lesion burden: 500-5000 mm²
+    - Moderate lesion burden: 5000-15000 mm²
+    - Severe lesion burden: > 15000 mm²
+    (Note: These are approximate guidelines and may vary by study protocol)
+
+    Expected Clinical Patterns:
+    - HC group: Low baseline with gradual age-related increase
+    - MS group: Higher baseline with potentially steeper age-related progression
+    - Gender differences: May reflect hormonal or lifestyle factors
+    - Age acceleration: MS may show earlier onset of lesion accumulation
+    
+    Statistical Significance Levels:
+    - p < 0.001: Highly significant (strong evidence)
+    - p < 0.01: Very significant (moderate to strong evidence)
+    - p < 0.05: Significant (sufficient evidence)
+    - p ≥ 0.05: Non-significant (insufficient evidence)
+    
+    Effect Size Interpretation:
+    - Cohen's d or r values indicate practical significance
+    - Large effect sizes may be clinically meaningful even if p > 0.05
+    - Small p-values with small effect sizes may lack clinical relevance
+
+    DATA QUALITY CONSIDERATIONS
+    ----------------------------
+    - Zero values in plots indicate no subjects in that age/gender combination
+    - Small sample sizes may lead to unstable mean estimates
+    - Standard deviations provide insight into data variability within groups
+    - WMH measurements are sensitive to MRI acquisition parameters
+    - Manual/automated segmentation differences may affect absolute values
+    - Ratios help normalize for technical and anatomical variations
+    - Normality violations automatically trigger non-parametric alternatives
+    
+    STATISTICAL TESTING DETAILS
+    ----------------------------
+    Overall group comparisons (HC vs MS) performed separately for each metric:
+    
+    1. WMH Area Analysis:
+       - Automatic normality assessment using Shapiro-Wilk test
+       - Test selection based on normality results
+       - Effect size calculation appropriate to test type
+       - Comprehensive reporting of descriptive statistics
+    
+    2. WMH Ratio Analysis:
+       - Independent statistical analysis from area measurements
+       - Same rigorous normality assessment and test selection
+       - Separate effect size calculations
+       - Controls for multiple testing considerations
+    
+    Test Assumptions:
+    - Parametric tests: Normality, independence, homogeneity of variance
+    - Non-parametric tests: Independence, similar distributions
+    - Both assume random sampling from populations of interest
+
+    OUTPUT FILES GENERATED
+    -----------------------
+    1. Figure: total_lesion_burden_analysis.png
+       - 2x2 subplot layout with stacked area plots showing proportional contributions
+       - High resolution (DPI: 300)
+       - White background for publication quality
+
+    2. Enhanced Statistics Tables (CSV):
+       - lesion_area_detailed_stats.csv (includes all descriptive statistics)
+       - lesion_ratio_detailed_stats.csv (includes all descriptive statistics)
+       - lesion_statistical_comparisons.csv (NEW: comprehensive test results)
+
+    3. Plot Data Tables (CSV):
+       - lesion_area_plot_data.csv (means and sample sizes)
+       - lesion_ratio_plot_data.csv (means and sample sizes)
+    
+    4. Contribution Analysis (CSV):
+       - lesion_area_contributions.csv (NEW: proportional contributions)
+       - lesion_ratio_contributions.csv (NEW: proportional contributions)
+        
+    5. Statistical Results Summary (CSV):
+       - lesion_normality_results.csv (NEW: normality test outcomes)
+       - lesion_effect_sizes.csv (NEW: effect size calculations)
+
+    6. Stacked Area Values (CSV):
+       - lesion_area_stacked_data.csv
+       - lesion_ratio_stacked_data.csv
+
+    7. This Documentation:
+       - lesion_burden_analysis_documentation.txt
+
+    TECHNICAL SPECIFICATIONS
+    -------------------------
+    Figure Specifications:
+    - Size: 16" x 12" (width x height)
+    - DPI: 300
+    - Background: White
+    - Font sizes: Title=14pt (bold), Axis labels=12pt
+    - Grid: Enabled with 30% transparency
+    - Legend: Enabled for each subplot
+
+    Data Processing:
+    - Missing data handled by excluding from calculations
+    - Zero values used when no subjects available in category
+    - Robust statistics (median/IQR) preferred over mean/SD
+    - Sample size weighting for statistical calculations
+    
+    Statistical Libraries:
+    - scipy.stats: Shapiro-Wilk, t-test, Mann-Whitney U
+    - numpy: Mathematical operations and statistical functions
+    - pandas: Data manipulation and summary statistics
+    
+    Quality Control:
+    - Automatic handling of missing values
+    - Robust error handling for edge cases
+    - Comprehensive logging of statistical decisions
+    - Validation of statistical assumptions
+    
+    LIMITATIONS AND CONSIDERATIONS
+    ------------------------------
+    1. Sample Size Variations:
+       - Some age/gender combinations may have small sample sizes
+       - Unbalanced groups may affect statistical power
+       - Non-parametric tests more robust to unequal sample sizes
+    
+    2. Multiple Comparisons:
+       - Two separate statistical tests performed (area and ratio)
+       - Consider Bonferroni correction: α = 0.05/2 = 0.025
+       - Family-wise error rate may be inflated without correction
+
+    3. Age Grouping Effects:
+       - Discretized age groups may mask continuous age effects
+       - Age bin boundaries are predetermined and may not reflect natural breakpoints
+       - Consider continuous age modeling for more detailed analysis
+
+    4. Lesion Measurement Considerations:
+       - WMH detection depends on MRI sequence parameters
+       - Segmentation methods (manual vs automated) may introduce variability
+       - Small lesions may be missed due to resolution limitations
+       - Partial volume effects at tissue boundaries
+
+    5. Stacked Area Representation:
+       - Visual emphasis on gender differences may overshadow group differences
+       - Direct comparison between groups requires careful interpretation
+       - Mean values used may not reflect distribution skewness
+
+    6. Statistical Assumptions:
+       - Automatic normality testing with Shapiro-Wilk (sensitive to large samples)
+       - Independence assumption may be violated in related subjects
+       - Equal variances assumed for t-tests (consider Welch's t-test alternative)
+
+    RECOMMENDED FOLLOW-UP ANALYSES
+    ------------------------------
+    1. Advanced Statistical Approaches:
+       - Age as continuous variable (linear/polynomial regression)
+       - Two-way ANOVA with interaction terms (group × gender × age)
+       - Mixed-effects models for correlated data
+       - Bootstrap confidence intervals for robust inference
+    
+    2. Multiple Comparisons Corrections:
+       - Bonferroni correction for family-wise error control
+       - False Discovery Rate (FDR) control for exploratory analyses
+       - Planned comparisons vs. post-hoc testing strategies
+    
+    3. Effect Size and Power Analysis:
+       - Post-hoc power calculations for observed effects
+       - Sample size calculations for future studies
+       - Confidence intervals around effect size estimates
+    
+    4. Alternative Statistical Approaches:
+       - Bayesian analysis for probabilistic interpretation
+       - Permutation tests for distribution-free inference
+       - Robust statistical methods for outlier resistance
+
+    5. Longitudinal Analysis:
+       - If temporal data available, analyze lesion progression rates
+       - Mixed-effects models for individual trajectories
+       - Survival analysis for time to lesion threshold
+       - Correlation with clinical severity measures
+       - Longitudinal tracking of lesion changes
+       - Predictive modeling for disease progression
+        
+    QUALITY ASSURANCE CHECKLIST
+    ----------------------------
+    ✓ Normality testing performed automatically
+    ✓ Appropriate statistical test selected based on data properties
+    ✓ Effect sizes calculated and reported
+    ✓ Both parametric and non-parametric results available
+    ✓ Comprehensive descriptive statistics provided
+    ✓ Multiple output formats for different use cases
+    ✓ Documentation includes interpretation guidelines
+    ✓ Limitations and assumptions clearly stated
+    ✓ Recommendations for follow-up analyses provided
+
+    QUALITY CONTROL RECOMMENDATIONS
+    --------------------------------
+    1. Data Validation:
+       - Check for implausible values (negative areas, ratios > 100%)
+       - Identify and investigate outliers
+       - Verify age group assignments
+
+    2. Technical Validation:
+       - Compare manual vs automated segmentation on subset
+       - Inter-rater reliability for manual segmentations
+       - Phantom studies for scanner consistency
+
+    3. Clinical Validation:
+       - Correlation with clinical disability measures
+       - Agreement with radiological assessment
+       - Validation against established biomarkers
+
+    CONTACT AND METHODOLOGY
+    -----------------------
+    This analysis was generated using an automated pipeline for lesion burden assessment 
+    with enhanced statistical testing capabilities.
+    
+    For questions about methodology or interpretation, refer to:
+    - Original research protocol and statistical analysis plan
+    - Relevant neuroimaging analysis guidelines
+    - Statistical consulting resources for complex designs
+    
+    Analysis Pipeline Version: Enhanced Statistical Testing v2.0
+    Statistical Methods: Automatic normality assessment with adaptive test selection
+    Last Updated: 2025-09-18
+
+    END OF DOCUMENTATION
+    ====================
+    

@@ -1,0 +1,13 @@
+Panel,Panel_Description,Group,Valid_Observations,Excluded_Observations,Exclusion_Rate_%,Scatter_Color,Data_Available
+A,Ventricular Burden vs Age (All Participants),HC,910,8,0.9%,#2ca02c,Yes
+A,Ventricular Burden vs Age (All Participants),MS,352,1,0.3%,#ff7f0e,Yes
+B,Total Lesion Burden vs Age (All Participants),HC,910,8,0.9%,#2ca02c,Yes
+B,Total Lesion Burden vs Age (All Participants),MS,352,1,0.3%,#ff7f0e,Yes
+C,Ventricular Burden vs Age (Female),HC,626,5,0.8%,#2ca02c,Yes
+C,Ventricular Burden vs Age (Female),MS,254,1,0.4%,#ff7f0e,Yes
+D,Total Lesion Burden vs Age (Female),HC,626,5,0.8%,#2ca02c,Yes
+D,Total Lesion Burden vs Age (Female),MS,254,1,0.4%,#ff7f0e,Yes
+E,Ventricular Burden vs Age (Male),HC,284,3,1.0%,#2ca02c,Yes
+E,Ventricular Burden vs Age (Male),MS,98,0,0.0%,#ff7f0e,Yes
+F,Total Lesion Burden vs Age (Male),HC,284,3,1.0%,#2ca02c,Yes
+F,Total Lesion Burden vs Age (Male),MS,98,0,0.0%,#ff7f0e,Yes

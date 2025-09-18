@@ -1,0 +1,110 @@
+PatientID,Group,AgeGroup,Gender,OutlierCount,OutlierVariables
+104447,MS,40-49,Female,4,TotalWMHArea_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49; TotalParaArea_MS_40-49
+104670,MS,30-39,Male,4,TotalVentricleArea_MS_30-39; TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39
+104797,MS,40-49,Male,5,TotalVentricleArea_MS_40-49; TotalWMHArea_MS_40-49; VentricleRatio_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49
+106200,MS,30-39,Female,4,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalJuxtArea_MS_30-39
+107739,MS,40-49,Female,4,TotalWMHArea_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49; TotalParaArea_MS_40-49
+110214,HC,30-39,Female,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+110258,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+110280,MS,30-39,Male,5,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39; TotalJuxtArea_MS_30-39
+110584,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+111031,HC,50-59,Male,3,TotalWMHArea_HC_50-59; WMHRatio_HC_50-59; TotalPeriArea_HC_50-59
+111140,MS,30-39,Male,4,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39
+111264,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+111414,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+111453,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+111501,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+111802,HC,30-39,Female,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+111852,MS,18-29,Female,4,TotalWMHArea_MS_18-29; WMHRatio_MS_18-29; TotalPeriArea_MS_18-29; TotalParaArea_MS_18-29
+112069,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+112108,HC,30-39,Female,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+112198,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+112415,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+112452,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+112961,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+112969,HC,40-49,Male,3,TotalParaArea_HC_40-49; peri_wmh_ratio_HC_40-49; para_wmh_ratio_HC_40-49
+113224,HC,40-49,Male,3,TotalVentricleArea_HC_40-49; VentricleRatio_HC_40-49; peri_wmh_ratio_HC_40-49
+113250,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+113789,HC,40-49,Male,3,TotalJuxtArea_HC_40-49; peri_wmh_ratio_HC_40-49; juxta_wmh_ratio_HC_40-49
+114011,HC,18-29,Male,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+114237,HC,30-39,Female,4,TotalIntracranialArea_HC_30-39; TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+114266,MS,30-39,Female,5,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39; TotalJuxtArea_MS_30-39
+114304,MS,30-39,Male,3,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39
+114630,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+114787,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+114941,HC,40-49,Male,3,TotalVentricleArea_HC_40-49; VentricleRatio_HC_40-49; peri_wmh_ratio_HC_40-49
+115814,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+115910,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+116064,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+116155,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+116204,HC,40-49,Female,3,TotalParaArea_HC_40-49; peri_wmh_ratio_HC_40-49; para_wmh_ratio_HC_40-49
+116376,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+116963,HC,30-39,Female,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+116982,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+117007,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+117264,HC,40-49,Male,6,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49; TotalJuxtArea_HC_40-49; peri_wmh_ratio_HC_40-49; juxta_wmh_ratio_HC_40-49
+117289,HC,40-49,Female,3,TotalParaArea_HC_40-49; peri_wmh_ratio_HC_40-49; para_wmh_ratio_HC_40-49
+117321,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+117949,MS,30-39,Female,4,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalJuxtArea_MS_30-39
+118070,HC,18-29,Female,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+118177,HC,40-49,Female,3,TotalParaArea_HC_40-49; peri_wmh_ratio_HC_40-49; para_wmh_ratio_HC_40-49
+118376,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+118450,MS,30-39,Female,3,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39
+118807,MS,40-49,Male,5,TotalVentricleArea_MS_40-49; TotalWMHArea_MS_40-49; VentricleRatio_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49
+118851,HC,40-49,Female,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+119092,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+119906,HC,50-59,Male,3,TotalParaArea_HC_50-59; peri_wmh_ratio_HC_50-59; para_wmh_ratio_HC_50-59
+120314,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+120384,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+121179,HC,18-29,Male,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+121257,HC,30-39,Female,5,TotalParaArea_HC_30-39; TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+121556,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+121606,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+121610,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+121755,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+121804,MS,30-39,Male,5,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39; TotalJuxtArea_MS_30-39
+121953,HC,30-39,Female,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+122798,HC,18-29,Female,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+123311,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+123447,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+123483,HC,40-49,Female,3,TotalJuxtArea_HC_40-49; peri_wmh_ratio_HC_40-49; juxta_wmh_ratio_HC_40-49
+123615,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+123787,HC,30-39,Female,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+123830,HC,18-29,Male,5,TotalParaArea_HC_18-29; TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+123870,HC,18-29,Male,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+123873,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+123975,HC,18-29,Male,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+124292,HC,18-29,Male,6,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29; TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+124397,HC,18-29,Male,4,TotalVentricleArea_HC_18-29; TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+124692,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+125582,HC,40-49,Male,3,TotalWMHArea_HC_40-49; WMHRatio_HC_40-49; TotalPeriArea_HC_40-49
+125723,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+125986,HC,30-39,Male,3,TotalJuxtArea_HC_30-39; peri_wmh_ratio_HC_30-39; juxta_wmh_ratio_HC_30-39
+126083,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+126355,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+126422,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+126550,HC,18-29,Female,3,TotalJuxtArea_HC_18-29; peri_wmh_ratio_HC_18-29; juxta_wmh_ratio_HC_18-29
+126678,HC,30-39,Female,3,TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+127016,HC,18-29,Male,3,TotalWMHArea_HC_18-29; WMHRatio_HC_18-29; TotalPeriArea_HC_18-29
+127658,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+127870,MS,30-39,Male,4,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39
+128071,HC,40-49,Female,3,TotalParaArea_HC_40-49; peri_wmh_ratio_HC_40-49; para_wmh_ratio_HC_40-49
+128161,HC,18-29,Male,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+128604,HC,30-39,Male,6,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39; TotalParaArea_HC_30-39; peri_wmh_ratio_HC_30-39; para_wmh_ratio_HC_30-39
+128621,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+128702,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+128871,HC,30-39,Male,3,TotalWMHArea_HC_30-39; WMHRatio_HC_30-39; TotalPeriArea_HC_30-39
+128879,HC,18-29,Female,3,TotalParaArea_HC_18-29; peri_wmh_ratio_HC_18-29; para_wmh_ratio_HC_18-29
+131444,MS,30-39,Female,3,TotalVentricleArea_MS_30-39; VentricleRatio_MS_30-39; TotalPeriArea_MS_30-39
+131792,MS,18-29,Female,3,TotalWMHArea_MS_18-29; WMHRatio_MS_18-29; TotalPeriArea_MS_18-29
+132920,MS,40-49,Female,4,TotalWMHArea_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49; TotalParaArea_MS_40-49
+133814,MS,40-49,Female,5,TotalVentricleArea_MS_40-49; TotalWMHArea_MS_40-49; VentricleRatio_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49
+135733,MS,50-59,Female,4,TotalWMHArea_MS_50-59; WMHRatio_MS_50-59; TotalPeriArea_MS_50-59; TotalParaArea_MS_50-59
+137624,MS,40-49,Female,5,TotalVentricleArea_MS_40-49; TotalWMHArea_MS_40-49; VentricleRatio_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49
+140067,MS,30-39,Female,4,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39
+141148,MS,18-29,Male,4,TotalWMHArea_MS_18-29; WMHRatio_MS_18-29; TotalPeriArea_MS_18-29; TotalParaArea_MS_18-29
+142314,MS,30-39,Female,5,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39; TotalJuxtArea_MS_30-39
+145997,MS,40-49,Male,4,TotalWMHArea_MS_40-49; WMHRatio_MS_40-49; TotalPeriArea_MS_40-49; TotalParaArea_MS_40-49
+148176,MS,30-39,Female,5,TotalWMHArea_MS_30-39; WMHRatio_MS_30-39; TotalPeriArea_MS_30-39; TotalParaArea_MS_30-39; TotalJuxtArea_MS_30-39
+148899,MS,18-29,Female,4,TotalWMHArea_MS_18-29; WMHRatio_MS_18-29; TotalPeriArea_MS_18-29; TotalParaArea_MS_18-29
+149109,MS,50-59,Female,3,TotalWMHArea_MS_50-59; WMHRatio_MS_50-59; TotalPeriArea_MS_50-59

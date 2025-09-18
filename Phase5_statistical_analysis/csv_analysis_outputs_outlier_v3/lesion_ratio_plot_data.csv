@@ -1,0 +1,6 @@
+Age_Group,Age_Center,HC_Male_Mean,HC_Female_Mean,HC_Combined_Mean,HC_Male_Contribution,HC_Female_Contribution,MS_Male_Mean,MS_Female_Mean,MS_Combined_Mean,MS_Male_Contribution,MS_Female_Contribution,HC_Male_N,HC_Female_N,MS_Male_N,MS_Female_N
+18-29,23.5,0.03,0.01,0.02,0.01,0.01,0.12,0.07,0.09,0.04,0.05,95,185,28,58
+30-39,34.5,0.02,0.01,0.01,0.00,0.01,0.18,0.15,0.16,0.04,0.12,95,248,31,92
+40-49,44.5,0.02,0.01,0.01,0.01,0.01,0.20,0.21,0.21,0.06,0.15,66,138,26,69
+50-59,54.5,0.02,0.01,0.02,0.01,0.01,0.32,0.23,0.25,0.09,0.17,22,48,12,31
+60+,64.5,0.02,0.02,0.02,0.01,0.01,0.70,0.72,0.71,0.14,0.58,5,6,1,4

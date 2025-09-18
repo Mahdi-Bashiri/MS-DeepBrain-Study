@@ -1,0 +1,10 @@
+Subgroup,Lesion Type,Total N,Age Groups,Mean of Means,Median of Medians,Range of Means,Range of Medians
+All MS Patients,PEWMH,352,5,213.70,56.00,48.12 - 586.00,25.50 - 546.00
+All MS Patients,PAWMH,352,5,57.36,24.00,29.74 - 103.20,5.50 - 130.00
+All MS Patients,JCWMH,352,5,40.50,19.00,18.92 - 86.80,8.00 - 93.00
+Female MS Patients,PEWMH,254,5,206.29,51.00,36.79 - 596.00,18.00 - 604.50
+Female MS Patients,PAWMH,254,5,52.77,21.00,24.60 - 96.50,4.00 - 88.50
+Female MS Patients,JCWMH,254,5,38.74,20.00,13.76 - 84.75,5.50 - 82.00
+Male MS Patients,PEWMH,98,5,229.52,78.50,71.57 - 546.00,49.00 - 546.00
+Male MS Patients,PAWMH,98,5,70.60,25.50,40.39 - 130.00,13.00 - 130.00
+Male MS Patients,JCWMH,98,5,45.28,22.00,29.50 - 95.00,17.50 - 95.00

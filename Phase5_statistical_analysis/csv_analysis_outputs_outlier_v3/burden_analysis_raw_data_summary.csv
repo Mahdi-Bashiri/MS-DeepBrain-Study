@@ -1,0 +1,13 @@
+Panel,Panel_Description,Group,Total_Participants,Missing_Age,Missing_Ratio,Data_Column
+A,Ventricular Burden vs Age (All Participants),HC,918,8,0,VentricleRatio
+A,Ventricular Burden vs Age (All Participants),MS,353,1,0,VentricleRatio
+B,Total Lesion Burden vs Age (All Participants),HC,918,8,0,WMHRatio
+B,Total Lesion Burden vs Age (All Participants),MS,353,1,0,WMHRatio
+C,Ventricular Burden vs Age (Female),HC,631,5,0,VentricleRatio
+C,Ventricular Burden vs Age (Female),MS,255,1,0,VentricleRatio
+D,Total Lesion Burden vs Age (Female),HC,631,5,0,WMHRatio
+D,Total Lesion Burden vs Age (Female),MS,255,1,0,WMHRatio
+E,Ventricular Burden vs Age (Male),HC,287,3,0,VentricleRatio
+E,Ventricular Burden vs Age (Male),MS,98,0,0,VentricleRatio
+F,Total Lesion Burden vs Age (Male),HC,287,3,0,WMHRatio
+F,Total Lesion Burden vs Age (Male),MS,98,0,0,WMHRatio
