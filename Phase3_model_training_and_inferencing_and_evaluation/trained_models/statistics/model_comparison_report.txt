@@ -1,0 +1,46 @@
+
+COMPREHENSIVE MODEL COMPARISON STATISTICAL ANALYSIS
+==================================================
+
+Models Compared: Enhanced_Attention_U-Net, Enhanced_Trans_U-Net, Hybrid_Model, Enhanced_U-Net, U-Net, Attention_U-Net, DeepLabV3Plus, Trans_U-Net
+Number of Models: 8
+
+PERFORMANCE SUMMARY:
+-------------------
+
+Mean Dice:
+Best Model: Attention_U-Net (0.7495)
+Worst Model: Enhanced_Trans_U-Net (0.6414)
+Mean ± Std: 0.6960 ± 0.0358
+Range: 0.1081
+
+Mean IoU:
+Best Model: Attention_U-Net (0.6104)
+Worst Model: Enhanced_Trans_U-Net (0.5073)
+Mean ± Std: 0.5546 ± 0.0358
+Range: 0.1031
+
+Abnormal WMH Dice:
+Best Model: Attention_U-Net (0.6461)
+Worst Model: Enhanced_Trans_U-Net (0.4340)
+Mean ± Std: 0.5520 ± 0.0699
+Range: 0.2121
+
+Ventricles Dice:
+Best Model: Enhanced_Attention_U-Net (0.8550)
+Worst Model: DeepLabV3Plus (0.7881)
+Mean ± Std: 0.8400 ± 0.0209
+Range: 0.0669
+
+
+RANKING ANALYSIS:
+----------------
+Based on Mean Dice Score:
+1. Attention_U-Net: 0.7495
+2. U-Net: 0.7364
+3. Trans_U-Net: 0.7281
+4. Hybrid_Model: 0.6955
+5. Enhanced_U-Net: 0.6799
+6. Enhanced_Attention_U-Net: 0.6705
+7. DeepLabV3Plus: 0.6669
+8. Enhanced_Trans_U-Net: 0.6414
