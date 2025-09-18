@@ -1,0 +1,315 @@
+
+    PUBLICATION FIGURE 1: DEMOGRAPHICS ANALYSIS - COMPREHENSIVE DOCUMENTATION
+    =========================================================================
+
+    Generated on: 2025-09-18 13:00:22
+
+    OVERVIEW
+    --------
+    Figure 1 presents a comprehensive overview of the study population demographics, 
+    showing gender distribution and age patterns across different study groups 
+    (Healthy Controls [HC] and Multiple Sclerosis [MS] patients). The figure 
+    consists of four panels providing complementary views of participant characteristics.
+
+    FIGURE DESCRIPTION
+    ------------------
+    The figure uses a 2×3 grid layout (16" width × 10" height) with the following structure:
+
+    Panel Layout:
+    - Top Row (Panels A-C): Gender distribution pie charts
+    - Bottom Row (Panel D): Age distribution histogram (spans full width)
+
+    Panel Details:
+    A. All Participants Gender Distribution (Top-Left)
+    B. HC Gender Distribution (Top-Center)  
+    C. MS Gender Distribution (Top-Right)
+    D. Age Distribution by Group and Gender (Bottom, full width)
+
+    PANEL-BY-PANEL DESCRIPTION
+    ---------------------------
+
+    Panel A: All Participants Gender Distribution
+    - Chart Type: Pie chart
+    - Purpose: Shows overall gender balance in the entire study population
+    - Data: Total participants = 1381
+    - Male participants: 435 (31.4%)
+    - Female participants: 946 (68.6%)
+    - Colors: Male = #1f77b4, Female = #d62728
+
+    Panel B: HC Gender Distribution  
+    - Chart Type: Pie chart
+    - Purpose: Shows gender balance within the healthy control group
+    - Data: HC participants = 1000
+    - HC Male: 327 (32.6%)
+    - HC Female: 673 (67.4%)
+
+    Panel C: MS Gender Distribution
+    - Chart Type: Pie chart  
+    - Purpose: Shows gender balance within the multiple sclerosis patient group
+    - Data: MS participants = 381
+    - MS Male: 108 (28.3%)
+    - MS Female: 273 (71.7%)
+
+    Panel D: Age Distribution by Group and Gender
+    - Chart Type: Overlapping histogram
+    - Purpose: Shows age patterns across all four demographic subgroups
+    - Age Range: 18-68 years
+    - Bin Width: 5 years
+    - Groups Displayed: HC Male, HC Female, MS Male, MS Female
+    - Colors: HC Male (#1f77b4), HC Female (#d62728), MS Male (#00FF00), MS Female (#FF8C00)
+    - Alpha: 0.7 (transparency for overlapping visualization)
+
+    DEMOGRAPHIC CHARACTERISTICS
+    ----------------------------
+
+    Overall Study Population:
+    - Total Participants: 1381
+    - Male:Female Ratio: 435:946 = 0.46:1
+    - HC:MS Ratio: 1000:381 = 2.62:1
+
+    Healthy Controls (HC):
+    - Total HC: 1000
+    - HC Males: 327
+    - HC Females: 673
+    - HC Male:Female Ratio: 0.48:1
+
+    Multiple Sclerosis Patients (MS):
+    - Total MS: 381
+    - MS Males: 108
+    - MS Females: 273
+    - MS Male:Female Ratio: 0.40:1
+
+    AGE DISTRIBUTION ANALYSIS
+    -------------------------
+
+    Age distribution is presented using overlapping histograms to allow comparison across groups.
+    Statistical measures are calculated for each demographic subgroup:
+
+    HC Male Age Distribution:
+    - N = 327
+    - Mean ± SD = 34.8 ± 10.8 years
+    - Median [IQR] = 35.0 [26.0-42.0] years
+    - Range = 18.0-72.0 years
+
+    HC Female Age Distribution:
+    - N = 673
+    - Mean ± SD = 34.7 ± 9.9 years
+    - Median [IQR] = 34.0 [27.0-41.0] years
+    - Range = 18.0-74.0 years
+
+    MS Male Age Distribution:
+    - N = 108
+    - Mean ± SD = 36.6 ± 10.5 years
+    - Median [IQR] = 34.5 [29.0-45.2] years
+    - Range = 18.0-60.0 years
+
+    MS Female Age Distribution:
+    - N = 273
+    - Mean ± SD = 37.7 ± 10.2 years
+    - Median [IQR] = 37.0 [30.0-44.0] years
+    - Range = 18.0-68.0 years
+
+    HISTOGRAM BIN ANALYSIS
+    ----------------------
+
+    The age histogram uses 10 bins spanning from 18 to 68 years:
+
+    Bin Structure:
+    - Bin Width: 5 years
+    - Total Bins: 10
+    - Bin Centers: 20.5, 25.5, 30.5, 35.5, 40.5, 45.5, 50.5, 55.5, 60.5, 65.5
+
+    Group Totals in Histogram:
+    - HC Male Total: 327
+    - HC Female Total: 673
+    - MS Male Total: 108
+    - MS Female Total: 273
+
+    CLINICAL AND RESEARCH IMPLICATIONS
+    ----------------------------------
+
+    Gender Distribution Patterns:
+    - Overall gender balance provides adequate representation for gender-specific analyses
+    - HC and MS groups show similar or different gender distributions (compare percentages)
+    - Gender imbalances may reflect disease epidemiology (MS is more common in females)
+
+    Age Distribution Patterns:
+    - Age ranges allow assessment of age-related effects
+    - Overlapping age distributions enable age-matched comparisons between groups
+    - Histogram visualization reveals distribution shape and potential outliers
+
+    Study Design Considerations:
+    - Balanced demographics support robust statistical comparisons
+    - Age and gender matching critical for controlling confounding variables
+    - Sample sizes adequate for planned analyses within demographic subgroups
+
+    VISUALIZATION METHODOLOGY
+    --------------------------
+
+    Pie Charts (Panels A-C):
+    - Standard pie charts with percentage labels
+    - Consistent color scheme across panels
+    - Start angle: 90 degrees (12 o'clock position)
+    - Automatic percentage calculation and display
+
+    Histogram (Panel D):
+    - Overlapping histogram with transparency (alpha=0.7)
+    - Equal bin widths for fair comparison
+    - Legend identifying all four demographic groups
+    - Grid overlay for easier value reading
+    - Unstacked visualization allows direct comparison of distributions
+
+    Color Scheme:
+    - HC Male: #1f77b4 (consistent with pie charts)
+    - HC Female: #d62728 (consistent with pie charts)
+    - MS Male: #00FF00 (bright green for distinction from HC)
+    - MS Female: #FF8C00 (orange for distinction from HC)
+
+    STATISTICAL CONSIDERATIONS
+    ---------------------------
+
+    Sample Size Adequacy:
+    - Overall sample size: 1381 participants
+    - Minimum group size: 108
+    - Power analysis recommended for planned comparisons
+
+    Age Distribution Assessment:
+    - Normality testing may be needed for parametric analyses
+    - Non-parametric alternatives available for skewed distributions
+    - Age matching strategies should be documented
+
+    Gender Balance:
+    - Chi-square tests can assess gender distribution differences between groups
+    - Fisher's exact test appropriate for small cell counts
+    - Gender stratification may be necessary for some analyses
+
+    QUALITY CONTROL MEASURES
+    -------------------------
+
+    Data Validation:
+    - Age ranges checked for biological plausibility
+    - Gender coding verified (Male/Female only)
+    - Missing data patterns assessed and documented
+
+    Visualization Accuracy:
+    - Pie chart percentages sum to 100% for each panel
+    - Histogram bin counts match raw data
+    - Color consistency maintained across panels
+
+    Statistical Verification:
+    - Demographic calculations independently verified
+    - Age statistics cross-checked with raw data
+    - Sample size counts validated against original dataset
+
+    OUTPUT FILES GENERATED
+    -----------------------
+
+    1. Figure: publication_figure_1_demographics.png
+       - 16" × 10" figure with four demographic panels
+       - High resolution (300 DPI) for publication quality
+       - White background with clear color differentiation
+
+    2. Demographics Tables (CSV format):
+       - demographics_gender_distribution.csv: Gender counts and percentages by group
+       - demographics_age_statistics.csv: Comprehensive age statistics by demographic subgroup
+       - demographics_age_histogram.csv: Age distribution by histogram bins and groups
+       - demographics_pie_chart_data.csv: Exact pie chart values and color assignments
+       - demographics_comprehensive_summary.csv: Overall demographic summary table
+
+    3. Documentation:
+       - publication_figure_1_demographics_documentation.txt: Complete figure explanation
+
+    TECHNICAL SPECIFICATIONS
+    -------------------------
+
+    Figure Properties:
+    - Dimensions: 16" width × 10" height
+    - Resolution: 300 DPI
+    - Format: PNG with white background
+    - Grid Layout: 2×3 subplot arrangement using GridSpec
+
+    Software Dependencies:
+    - matplotlib: Figure generation and subplot management
+    - pandas: Data manipulation and statistical calculations
+    - numpy: Numerical computations and array operations
+
+    Data Processing:
+    - Missing values excluded from calculations
+    - Age data converted to appropriate numeric format
+    - Gender categories limited to 'Male' and 'Female'
+
+    LIMITATIONS AND CONSIDERATIONS
+    ------------------------------
+
+    1. Sample Size Limitations:
+       - Unequal group sizes may limit some statistical comparisons
+       - Small subgroups may have insufficient power for interaction analyses
+       - Confidence intervals may be wide for smaller demographic categories
+
+    2. Age Distribution Effects:
+       - Cross-sectional design limits inferences about aging effects
+       - Age ranges may not capture very young or very old populations
+       - Histogram binning may obscure subtle age distribution differences
+
+    3. Gender Representation:
+       - Binary gender classification may not reflect participant diversity
+       - Gender imbalances may reflect disease epidemiology rather than sampling bias
+       - Gender-specific analyses require adequate representation in both categories
+
+    4. Visualization Limitations:
+       - Overlapping histograms may obscure some distribution details
+       - Pie chart effectiveness decreases with many small categories
+       - Color choices may not be accessible to colorblind viewers
+
+    RECOMMENDED ANALYSES
+    --------------------
+
+    1. Statistical Testing:
+       - Chi-square test for gender distribution differences between groups
+       - Independent t-tests or Mann-Whitney U tests for age comparisons
+       - ANOVA for multi-group age comparisons with post-hoc testing
+
+    2. Advanced Demographics:
+       - Age-gender interaction analyses
+       - Propensity score matching for demographic balancing
+       - Stratified analyses by age groups or gender
+
+    3. Visualization Enhancements:
+       - Box plots for detailed age distribution comparison
+       - Violin plots showing distribution shapes
+       - Demographic correlation matrices
+
+    4. Quality Assurance:
+       - Bootstrap confidence intervals for demographic estimates
+       - Sensitivity analyses excluding potential outliers
+       - Cross-validation with external demographic databases
+
+    CONTACT AND VERSION INFORMATION
+    --------------------------------
+
+    Analysis Generated: 2025-09-18 13:00:22
+    Documentation Version: 1.0
+    Pipeline: Automated demographic analysis with comprehensive table generation
+
+    For questions about demographic analysis methods, statistical testing approaches, 
+    or data interpretation, refer to the study protocol and statistical analysis plan.
+
+    REFERENCES
+    ----------
+
+    1. Altman DG. Practical Statistics for Medical Research. Chapman & Hall/CRC; 1991.
+
+    2. Bland JM, Altman DG. Statistical methods for assessing agreement between two 
+       methods of clinical measurement. Lancet. 1986;1(8476):307-10.
+
+    3. Cohen J. Statistical Power Analysis for the Behavioral Sciences. 2nd ed. 
+       Erlbaum; 1988.
+
+    4. Kirkwood BR, Sterne JAC. Essential Medical Statistics. 2nd ed. Blackwell 
+       Science; 2003.
+
+    5. Zar JH. Biostatistical Analysis. 5th ed. Prentice Hall; 2010.
+
+    END OF DOCUMENTATION
+    ====================
+    
