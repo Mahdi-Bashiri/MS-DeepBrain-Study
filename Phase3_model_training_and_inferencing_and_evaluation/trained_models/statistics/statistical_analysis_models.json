@@ -1,0 +1,91 @@
+{
+  "model_names": [
+    "Enhanced_Attention_U-Net",
+    "Enhanced_Trans_U-Net",
+    "Hybrid_Model",
+    "Enhanced_U-Net",
+    "U-Net",
+    "Attention_U-Net",
+    "DeepLabV3Plus",
+    "Trans_U-Net"
+  ],
+  "n_models": 8,
+  "metrics_analyzed": [
+    "Mean_Dice",
+    "Mean_IoU",
+    "Abnormal WMH_Dice",
+    "Ventricles_Dice"
+  ],
+  "Mean_Dice": {
+    "values": [
+      0.6704629727200736,
+      0.6414089450244874,
+      0.6955057329663756,
+      0.6798559461865942,
+      0.7363629045915093,
+      0.7494923992395122,
+      0.666851956802866,
+      0.7281254286274967
+    ],
+    "mean": 0.6960082857698644,
+    "std": 0.035821518846949695,
+    "best_model": "Attention_U-Net",
+    "best_score": 0.7494923992395122,
+    "worst_model": "Enhanced_Trans_U-Net",
+    "worst_score": 0.6414089450244874
+  },
+  "Mean_IoU": {
+    "values": [
+      "0.5338171",
+      "0.50725055",
+      "0.55045795",
+      "0.5418059",
+      "0.59325707",
+      "0.6103542",
+      "0.51272166",
+      "0.5868062"
+    ],
+    "mean": "0.5545589",
+    "std": "0.035792217",
+    "best_model": "Attention_U-Net",
+    "best_score": "0.6103542",
+    "worst_model": "Enhanced_Trans_U-Net",
+    "worst_score": "0.50725055"
+  },
+  "Abnormal WMH_Dice": {
+    "values": [
+      0.4859720205073782,
+      0.4339750488487395,
+      0.5577231713128955,
+      0.5057419330733182,
+      0.6336620981288055,
+      0.6461223051655789,
+      0.5456015088392294,
+      0.6072839547290169
+    ],
+    "mean": 0.5520102550756203,
+    "std": 0.0698991315348128,
+    "best_model": "Attention_U-Net",
+    "best_score": 0.6461223051655789,
+    "worst_model": "Enhanced_Trans_U-Net",
+    "worst_score": 0.4339750488487395
+  },
+  "Ventricles_Dice": {
+    "values": [
+      0.854953924932769,
+      0.8488428412002353,
+      0.8332882946198557,
+      0.8539699592998702,
+      0.8390637110542132,
+      0.8528624933134454,
+      0.7881024047665026,
+      0.8489669025259766
+    ],
+    "mean": 0.8400063164641085,
+    "std": 0.020862970328174555,
+    "best_model": "Enhanced_Attention_U-Net",
+    "best_score": 0.854953924932769,
+    "worst_model": "DeepLabV3Plus",
+    "worst_score": 0.7881024047665026
+  }
+}
