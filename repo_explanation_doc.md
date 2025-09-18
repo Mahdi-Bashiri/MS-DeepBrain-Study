@@ -1,3 +1,4 @@
+[repo_explanation_doc.md](https://github.com/user-attachments/files/22415871/repo_explanation_doc.md)
 # Repository Explanation: MS-DeepBrain-Study
 
 ## Document Overview
@@ -153,15 +154,10 @@ Phase3_model_training_and_inferencing_and_evaluation/
 │       ├── patient_051_target.png
 │       └── ...
 ├── chosen_model_performance/          # Performance evaluation results
-│   ├── dice_scores.csv                # Per-patient DSC values
-│   ├── iou_metrics.csv                # Intersection over Union results
-│   ├── hausdorff_distances.csv        # HD95 measurements
-│   └── confusion_matrices.png         # Visual performance assessment
 ├── trained_models/                    # Complete model repository
-│   ├── attention_unet_final.h5        # Best performing model weights
-│   ├── training_history.json          # Loss curves and metrics
-│   ├── model_architecture.json        # Network configuration
-│   └── hyperparameters.yaml           # Training configuration
+│   └── models/                          # Trained models
+│       ├── attention_unet_final.h5        # Best performing model weights
+│       └── attention_unet_history.pkl         # History of training
 ├── training_wmh_vent_unet_models_v3.py      # Model training implementation
 └── inferencing_wmh_vent_unet_models_v3.py   # Automated inference pipeline
 ```
@@ -222,23 +218,14 @@ Comprehensive Excel Output (1,381 subjects):
 ```
 Phase5_statistical_analysis/
 ├── csv_analysis_outputs_no_outlier_v3/        # Primary analysis results
-│   ├── demographic_analysis.html              # Population characteristics
-│   ├── lesion_burden_comparison.html          # MS vs HC dramatic differences
-│   ├── age_stratified_analysis.html           # 5 age group comparisons
-│   ├── gender_specific_patterns.html          # Male vs female differences
-│   ├── anatomical_distribution.html           # PEWMH, PAWMH, JCWMH analysis
-│   ├── correlation_matrices.html              # Multi-dimensional relationships
-│   ├── statistical_tables.docx                # Publication-ready tables
-│   └── figures_publication.pdf                # High-resolution figures
-├── csv_analysis_outputs_outlier_v3/           # Sensitivity analysis with outlier removal
-│   └── [Same structure as above]
+├── csv_analysis_outputs_outlier_v3/           # outlier removal
 └── comprehensive_statistical_analysis_v3.py   # Complete statistical pipeline
 ```
 
 **Statistical Analysis Implementation**:
 
 **Key Statistical Findings Generated**:
-1. **Lesion Burden Disparity**: 5-35x higher burden in MS patients (large effect size r=0.82)
+1. **Lesion Burden Disparity**: 5.5x higher burden in MS patients (large effect size r=0.82)
 2. **Age-Related Progression**: 0.13% → 0.71% normalized lesion ratio across age groups
 3. **Gender Differences**: Males 61.85% vs females 56.45% periventricular involvement (p=0.018)
 4. **Anatomical Distribution**: 58.02±28.35% periventricular predominance
