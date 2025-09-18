@@ -1,0 +1,2 @@
+Model,Overall_Accuracy,Ventricles_Precision,Ventricles_Recall,Ventricles_Dice,Ventricles_IoU,Ventricles_HD95,Abnormal WMH_Precision,Abnormal WMH_Recall,Abnormal WMH_Dice,Abnormal WMH_IoU,Abnormal WMH_HD95,Mean_Dice,Mean_IoU,Mean_HD95
+Attention_U-Net,0.995165825,0.899294781,0.81098957,0.852862493,0.74347013,8.455469549,0.843509535,0.523596906,0.646122305,0.4772383,19.45037285,0.749492399,0.6103542,13.9529212
