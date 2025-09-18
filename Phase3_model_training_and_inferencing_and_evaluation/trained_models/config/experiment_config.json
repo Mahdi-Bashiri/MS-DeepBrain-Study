@@ -1,0 +1,29 @@
+{
+  "timestamp": "20250909_034626",
+  "input_shape": [
+    256,
+    256,
+    1
+  ],
+  "target_size": [
+    256,
+    256
+  ],
+  "num_classes": 3,
+  "epochs": 30,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "validation_split": 0.1,
+  "random_state": 42,
+  "models_to_compare": [
+    "Enhanced_Attention_U-Net",
+    "Enhanced_Trans_U-Net",
+    "Hybrid_Model",
+    "Enhanced_U-Net",
+    "U-Net",
+    "Attention_U-Net",
+    "DeepLabV3Plus",
+    "Trans_U-Net"
+  ],
+  "loss_function": "unified_focal_loss"
+}
