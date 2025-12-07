@@ -1,5 +1,5 @@
 
-CONFERENCE PAPER RESULTS SUMMARY - MODEL COMPARISON STUDY
+BRAIN STUDY PAPER RESULTS SUMMARY - MODEL COMPARISON STUDY
 =========================================================
 Experiment Timestamp: 20251206_131955
 Multi-Class Brain Segmentation: Ventricles and Abnormal WMH
