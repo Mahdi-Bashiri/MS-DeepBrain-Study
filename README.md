@@ -157,7 +157,7 @@ The repository follows a **5-phase pipeline architecture**:
 - **Backbone**: ResNet-50 for robust feature extraction
 - **Input**: Single-modality FLAIR sequences (256×256 pixels)
 - **Output**: 3-class segmentation (background, ventricles, WMH)
-- **Processing Speed**: 5ms per image (inference)
+- **Processing Speed**: 38ms per image (inference)
 - **Training Details**: 100 epochs with hybrid loss function strategy
 
 ### Preprocessing Pipeline
