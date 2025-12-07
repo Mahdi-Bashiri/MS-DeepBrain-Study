@@ -8,6 +8,59 @@ DATASET INFORMATION:
 --------------------
 Training Images: 1044
 Test Images: 404
+MULTI-CLASS WMH AND VENTRICLES SEGMENTATION RESULTS
+===================================================
+Experiment Timestamp: 20251206_114006
+Model Architecture: ATTN_UNET
+
+DATASET INFORMATION:
+--------------------
+Training Images: 2050
+Test Images: 350
+Image Size: (256, 256)
+Classes: Background (0), Ventricles (1), Abnormal WMH (2)
+
+METHODOLOGY:
+------------
+Architecture: ATTN_UNET
+Loss Function: unified_focal
+Training Epochs: 100
+Batch Size: 8
+Learning Rate: 0.0001
+
+PERFORMANCE RESULTS:
+--------------------
+                            | Ventricles    | Abnormal WMH  | Overall
+--------------------|---------------|---------------|-------------
+Precision           | 0.9350        | 0.8883        | 0.9117
+Recall              | 0.8558           | 0.8930           | 0.8744
+Dice Coefficient    | 0.8937             | 0.8906             | 0.8921
+HD95 (pixels)       | 7.0000             | 2.0000             | 4.5000
+
+KEY FINDINGS:
+-------------
+1. Best performing class: Ventricles
+2. Ventricles Dice: 0.8937
+3. Abnormal WMH Dice: 0.8906
+4. Overall Dice: 0.8921
+
+FILES GENERATED:
+----------------
+- Model: multiclass_model.h5
+- Figures: training_curves.png/.pdf, comparison_visualization.png/.pdf, metrics_per_class.png/.pdf
+- Tables: attn_unet_metrics.csv/.xlsx, attn_unet_latex_table.tex
+- Statistics: statistical_analysis.json, statistical_report.txt
+- Predictions: All test predictions and ground truth data saved
+
+PUBLICATION READINESS:
+----------------------
+✓ High-resolution figures (300 DPI, PNG/PDF)
+✓ LaTeX-formatted tables
+✓ Comprehensive per-class metrics
+✓ Post-processing applied
+✓ Reproducible results with saved model
+✓ Professional documentation
+
 Image Size: (256, 256)
 Classes: Background (0), Ventricles (1), Abnormal WMH (2)
 
