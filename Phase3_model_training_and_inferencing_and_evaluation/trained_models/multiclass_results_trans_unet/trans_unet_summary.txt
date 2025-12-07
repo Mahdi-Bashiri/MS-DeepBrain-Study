@@ -1,0 +1,53 @@
+
+MULTI-CLASS WMH AND VENTRICLES SEGMENTATION RESULTS
+===================================================
+Experiment Timestamp: 20251206_121347
+Model Architecture: TRANS_UNET
+
+DATASET INFORMATION:
+--------------------
+Training Images: 2050
+Test Images: 350
+Image Size: (256, 256)
+Classes: Background (0), Ventricles (1), Abnormal WMH (2)
+
+METHODOLOGY:
+------------
+Architecture: TRANS_UNET
+Loss Function: unified_focal
+Training Epochs: 100
+Batch Size: 8
+Learning Rate: 0.0001
+
+PERFORMANCE RESULTS:
+--------------------
+                            | Ventricles    | Abnormal WMH  | Overall
+--------------------|---------------|---------------|-------------
+Precision           | 0.9403        | 0.8936        | 0.9169
+Recall              | 0.8527           | 0.8839           | 0.8683
+Dice Coefficient    | 0.8944             | 0.8887             | 0.8915
+HD95 (pixels)       | 5.0000             | 2.0000             | 3.5000
+
+KEY FINDINGS:
+-------------
+1. Best performing class: Ventricles
+2. Ventricles Dice: 0.8944
+3. Abnormal WMH Dice: 0.8887
+4. Overall Dice: 0.8915
+
+FILES GENERATED:
+----------------
+- Model: multiclass_model.h5
+- Figures: training_curves.png/.pdf, comparison_visualization.png/.pdf, metrics_per_class.png/.pdf
+- Tables: trans_unet_metrics.csv/.xlsx, trans_unet_latex_table.tex
+- Statistics: statistical_analysis.json, statistical_report.txt
+- Predictions: All test predictions and ground truth data saved
+
+PUBLICATION READINESS:
+----------------------
+✓ High-resolution figures (300 DPI, PNG/PDF)
+✓ LaTeX-formatted tables
+✓ Comprehensive per-class metrics
+✓ Post-processing applied
+✓ Reproducible results with saved model
+✓ Professional documentation
