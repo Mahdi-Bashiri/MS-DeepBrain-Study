@@ -373,7 +373,7 @@ python comprehensive_statistical_analysis_v3.py \
 | Operation | Time | Hardware |
 |-----------|------|----------|
 | **Training (per epoch)** | 40-45 seconds | RTX 3060 |
-| **Inference (per image)** | 5 milliseconds | RTX 3060 |
+| **Inference (per image)** | 38 milliseconds | RTX 3060 |
 | **Full cohort processing** | ~2 hours | 1,381 subjects |
 | **Statistical analysis** | ~10 minutes | i7-7700K |
 
