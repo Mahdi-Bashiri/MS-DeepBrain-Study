@@ -1,0 +1,20 @@
+{
+  "timestamp": "20251206_123601",
+  "model_name": "deepl3_unet",
+  "input_shape": [
+    256,
+    256,
+    1
+  ],
+  "target_size": [
+    256,
+    256
+  ],
+  "num_classes": 3,
+  "epochs": 100,
+  "batch_size": 8,
+  "learning_rate": 0.0001,
+  "validation_split": 0.1,
+  "random_state": 42,
+  "loss_function": "unified_focal"
+}
