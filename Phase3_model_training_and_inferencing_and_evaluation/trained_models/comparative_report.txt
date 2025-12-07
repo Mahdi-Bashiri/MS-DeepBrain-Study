@@ -1,0 +1,37 @@
+
+MULTI-MODEL COMPARATIVE ANALYSIS
+=================================
+Generated: 2025-12-06 13:19:55
+
+MODELS TESTED: UNET, ATTN_UNET, TRANS_UNET, DEEPL3_UNET
+
+PERFORMANCE COMPARISON:
+-----------------------
+      Model      Class  Precision   Recall     Dice  HD95
+       UNET Ventricles   0.926759 0.853778 0.888773   8.0
+       UNET        WMH   0.858051 0.874250 0.866075   3.0
+       UNET    Overall   0.892405 0.864014 0.877424   5.5
+  ATTN_UNET Ventricles   0.935039 0.855786 0.893659   7.0
+  ATTN_UNET        WMH   0.888278 0.892992 0.890629   2.0
+  ATTN_UNET    Overall   0.911658 0.874389 0.892144   4.5
+ TRANS_UNET Ventricles   0.940271 0.852736 0.894367   5.0
+ TRANS_UNET        WMH   0.893606 0.883895 0.888724   2.0
+ TRANS_UNET    Overall   0.916939 0.868315 0.891545   3.5
+DEEPL3_UNET Ventricles   0.924434 0.876439 0.899797   4.0
+DEEPL3_UNET        WMH   0.908535 0.905502 0.907016   1.0
+DEEPL3_UNET    Overall   0.916484 0.890970 0.903406   2.5
+
+BEST PERFORMING MODELS BY CLASS:
+---------------------------------
+
+Ventricles:
+  Best Dice: DEEPL3_UNET (0.8998)
+  Best HD95: DEEPL3_UNET (4.0000)
+WMH:
+  Best Dice: DEEPL3_UNET (0.9070)
+  Best HD95: DEEPL3_UNET (1.0000)
+Overall:
+  Best Dice: DEEPL3_UNET (0.9034)
+  Best HD95: DEEPL3_UNET (2.5000)
+
+Files saved in: multiclass_comparative_20251206_131955
