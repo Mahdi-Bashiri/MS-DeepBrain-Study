@@ -1,5 +1,4 @@
-[updated_readme.md](https://github.com/user-attachments/files/24014885/updated_readme.md)
-# Deep Learning-Based Neuroanatomical Profiling of Multiple Sclerosis
+# Deep Learning-Based Neuroanatomical Profiling Reveals Population-Specific Brain Changes in Multiple Sclerosis: A Large-Scale Middle Eastern Study
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -15,19 +14,20 @@ This repository implements a large-scale neuroanatomical profiling study of Mult
 
 - **🔬 Large-Scale MS Neuroimaging Study**: 1,381 participants (381 MS patients, 1,000 healthy controls)
 - **🌍 Population-Specific Research**: Addresses gap in Middle Eastern MS neuroimaging research
-- **🤖 Comparative Architecture Evaluation**: Four deep learning models evaluated (U-Net, Attention U-Net, Trans-U-Net, DeepLabV3Plus)
-- **⚡ Optimal Model Selection**: DeepLabV3Plus achieved superior performance (DSC=0.903, HD95=2.5mm)
+- **🤖 Comparative Architecture Evaluation**: Four deep learning models evaluated via 4-fold cross-validation (U-Net, Attention U-Net, Trans-U-Net, DeepLabV3Plus)
+- **⚡ Optimal Model Selection**: U-Net achieved superior performance (DSC=88.8%±0.5%, HD95=2.8±0.0mm, L-F1=77.4±1.4%)
 - **📊 Comprehensive Statistics**: Multi-dimensional analysis across age, gender, and anatomical regions
-- **🎯 Clinical Translation**: Population-specific normative values for MS biomarkers
+- **🎯 Clinical Translation**: Population-specific normative values for MS biomarkers in Middle Eastern populations
 
 ### 📈 Key Clinical Findings
 
 | Metric | MS Patients | Healthy Controls | Statistical Significance |
 |--------|-------------|------------------|-------------------------|
-| **Lesion Burden Disparity** | 5.5x higher | Baseline | p<0.001, r=0.82 (large effect) |
-| **Periventricular Involvement** | 58.02±28.35% | Minimal | Consistent predominance |
-| **Age-Related Progression** | 0.13% → 0.71% | 0.02% (stable) | Progressive accumulation |
-| **Gender Differences (PEWMH)** | ♂: 61.85% vs ♀: 56.45% | - | p=0.018, r=0.12 |
+| **WMH Lesion Burden** | ~3-fold higher (age-stratified) | Baseline | p<0.001 |
+| **Periventricular Predominance** | 53.91±20.62% | Minimal | Consistent across all age groups |
+| **Age-Related WMH Progression** | 0.315% → 0.749% (18–29 to 50–59 yrs) | Stable (r=0.085) | r=0.224 (MS) vs r=0.085 (HC) |
+| **Ventricular Area** | 3,812.7±1,791.1 mm² | 2,559.6±946.9 mm² | Cohen's d=1.012 |
+| **Gender Differences (Lesion Subtypes)** | No significant difference | — | n.s. after Bonferroni correction |
 
 ---
 
@@ -62,10 +62,10 @@ from Phase3_model_training_and_inferencing_and_evaluation import inferencing_wmh
 from Phase4_data_processing import core_processing
 from Phase5_statistical_analysis import comprehensive_statistical_analysis_v3
 
-# Run automated segmentation with DeepLabV3Plus (optimal model)
+# Run automated segmentation with U-Net (optimal model)
 results = inferencing_wmh_vent_unet_models_v3.main(
     input_dir="path/to/flair/images",
-    model_path="trained_models/deeplabv3plus_model",
+    model_path="trained_models/unet_model",
     output_dir="results/"
 )
 
@@ -108,10 +108,10 @@ The repository follows a **5-phase pipeline architecture**:
 │   ├── 📁 dataset_3l_man/          # Training/validation/testing datasets
 │   ├── 📁 model_performance/       # Performance metrics for all 4 architectures
 │   ├── 📁 trained_models/          # Pre-trained models (all 4 architectures)
-│   │   ├── unet_model/
+│   │   ├── unet_model/             # ⭐ Optimal model (DSC=88.8%, L-F1=77.4%)
 │   │   ├── attention_unet_model/
 │   │   ├── trans_unet_model/
-│   │   └── deeplabv3plus_model/    # ⭐ Optimal model (DSC=0.903)
+│   │   └── deeplabv3plus_model/
 │   ├── training_wmh_vent_unet_models_v3.py    # Model training
 │   └── inferencing_wmh_vent_unet_models_v3.py # Automated inference
 ├── 📁 Phase4_data_processing/       # Quantitative analysis
@@ -137,24 +137,25 @@ The repository follows a **5-phase pipeline architecture**:
   - **MS Patients**: 381 subjects (71.7% female, 28.3% male)
   - **Healthy Controls**: 1,000 subjects (67.4% female, 32.6% male)
 - **Age Range**: 18-74 years (HC), 18-68 years (MS)
-- **Mean Age**: HC: 34.7±10.2 years, MS: 37.4±10.2 years
+- **Mean Age**: HC males: 34.8±10.8 years, HC females: 34.7±9.8 years; MS: 37.4±10.2 years
 - **Location**: Golghasht Medical Imaging Center, Tabriz, Iran
 - **Ethics Approval**: Tabriz University of Medical Sciences Research Ethics Committee (IR.TBZMED.REC.1402.902)
 
 ### Deep Learning Architecture Evaluation
 
-**Comparative Analysis of 4 Architectures:**
+**Comparative Analysis of 4 Architectures (4-fold cross-validation):**
 
-| Model | Ventricle DSC | WMH DSC | Overall DSC | Overall HD95 (mm) | Selection |
-|-------|--------------|---------|-------------|-----------|-----------|
-| **U-Net** | 0.889 | 0.866 | 0.877 | 5.5 | Baseline |
-| **Attention U-Net** | 0.894 | 0.891 | 0.892 | 4.5 | Good |
-| **Trans-U-Net** | 0.894 | 0.889 | 0.892 | 3.5 | Good |
-| **DeepLabV3Plus** | 0.900 | 0.907 | **0.903** | **2.5** | ⭐ **Optimal** |
+| Model | Overall DSC (%) | HD95 (mm) | L-F1 (%) | Selection |
+|-------|----------------|-----------|----------|-----------|
+| **U-Net** | **88.8±0.5** | **2.8±0.0** | **77.4±1.4** | ⭐ **Optimal** |
+| **Attention U-Net** | — | — | — | Evaluated |
+| **Trans-U-Net** | — | — | — | Evaluated |
+| **DeepLabV3Plus** | — | — | — | Evaluated |
 
-**DeepLabV3Plus Implementation:**
-- **Architecture**: Atrous Spatial Pyramid Pooling (ASPP) with encoder-decoder
-- **Backbone**: ResNet-50 for robust feature extraction
+> All architectures demonstrated comparable performance. U-Net achieved superior overall DSC and HD95 and was selected for population-level analysis of the complete 1,381-subject cohort.
+
+**U-Net Implementation:**
+- **Architecture**: Symmetric encoder-decoder with skip connections
 - **Input**: Single-modality FLAIR sequences (256×256 pixels)
 - **Output**: 3-class segmentation (background, ventricles, WMH)
 - **Processing Speed**: 38ms per image (inference)
@@ -172,7 +173,7 @@ The repository follows a **5-phase pipeline architecture**:
 **Distance-Based Classification Criteria:**
 - **PEWMH** (Periventricular): ≤3mm from ventricular surface
 - **JCWMH** (Juxtacortical): ≤3mm from gray-white matter junction, area ≤20mm²
-- **PAWMH** (Paraventricular): Deep white matter lesions not meeting above criteria
+- **DWMH** (Deep White Matter): Remaining pathological hyperintensities not meeting periventricular or juxtacortical criteria (deep white matter parenchyma)
 
 ---
 
@@ -180,44 +181,48 @@ The repository follows a **5-phase pipeline architecture**:
 
 ### Model Performance
 
-**DeepLabV3Plus Achieved Optimal Performance:**
-- **Dice Similarity Coefficient**: 0.903 (overall)
-- **Hausdorff Distance (95th percentile)**: 2.5mm
-- **Ventricle Segmentation**: DSC=0.900, Precision=0.924, Recall=0.876
-- **WMH Segmentation**: DSC=0.907, Precision=0.909, Recall=0.906
+**U-Net Achieved Optimal Performance (4-fold cross-validation):**
+- **Dice Similarity Coefficient**: 88.8±0.5% (overall)
+- **Hausdorff Distance (95th percentile)**: 2.8±0.0mm
+- **Lesion-wise F1-score**: 77.4±1.4%
 
 ### Lesion Burden Analysis
 
-- **MS vs HC Comparison**: 5.5-fold higher lesion burden in MS patients
-- **Age-Related Progression**: 
-  - MS: 0.13% (18-29 years) → 0.71% (60+ years)
-  - HC: 0.02% (stable across age groups)
-- **Statistical Significance**: Mann-Whitney U test, p<0.001, effect size r=0.82 (large)
+- **MS vs HC Comparison**: MS patients exhibited substantially elevated WMH area relative to healthy controls
+- **Age-Related Progression**:
+  - MS WMH ratio: 0.315% (18–29 years) → 0.749% (50–59 years) (~2.4-fold increase)
+  - HC: Stable across age groups (r=0.085, negligible correlation)
+- **MS age correlation**: r=0.224 (moderate), HC: r=0.085 (negligible)
 
 ### Anatomical Distribution
 
-- **Periventricular Predominance**: 58.02±28.35% of total lesion burden
-  - Age-related increase: 44.97% (young) → 71.43% (older cohorts)
+- **Periventricular Predominance**: 53.91±20.62% of total lesion burden in MS patients
+  - Age-group means rising from 49.15% (18–29 years) to 63.49% (50–59 years)
 - **Gender-Specific Patterns**:
-  - Males: 61.85±25.84% periventricular (higher proportion)
-  - Females: 56.45±29.12% periventricular
-  - Statistical comparison: U=12,847, p=0.018, r=0.12
-- **Paraventricular**: 20.76±21.45%
-- **Juxtacortical**: 17.73±19.82%
+  - No statistically significant differences in lesion localization for any subtype after Bonferroni correction (α=0.017)
+- **Deep White Matter (DWMH)**: Second-largest contribution
+- **Juxtacortical (JCWMH)**: Smallest contribution
 
 ### Ventricular Burden
 
-- **No significant difference between MS and HC**: t=1.42, p=0.156
+- **MS patients showed significantly higher ventricular area than HC**: 3,812.7±1,791.1 mm² vs. 2,559.6±946.9 mm² (Cohen's d=1.012)
+- **Brain-normalized ventricular ratio**: ~1.7-fold higher in MS vs. HC
 - **Age-related correlations**:
-  - HC: r=0.241 (weak positive)
-  - MS: r=0.319 (moderate positive)
-- **Pattern**: Progressive enlargement with age in both groups
+  - HC: r=0.207 (weak positive)
+  - MS: r=0.403 (moderate positive)
+- **Pattern**: Progressive enlargement with age in both groups, accelerated in MS
+
+### Statistical Correlations (Spearman)
+
+- **HC (n=1,000)**: Age significantly correlated only with ventricular ratio (r=0.199, p=2.18×10⁻¹⁰) after Bonferroni correction
+- **MS (n=381)**: Age correlated significantly with ventricular ratio (r=0.403, p=2.50×10⁻¹⁶), total WMH ratio (r=0.266), and periventricular WMH (positive); deep WMH showed significant negative correlation with age
+- Juxtacortical WMH showed no significant age association (r=−0.046, p=0.37)
 
 ### Population-Specific Context
 
-- **Regional Prevalence**: Iran shows 100 per 100,000 vs global 35.9 per 100,000
-- **Study Contribution**: First large-scale neuroanatomical characterization in Middle Eastern population
-- **Clinical Utility**: Population-specific normative values for therapeutic monitoring
+- **Regional Prevalence**: Iran shows elevated MS prevalence compared to global average
+- **Study Contribution**: Large-scale neuroanatomical characterization in Middle Eastern population providing preliminary population-specific reference ranges
+- **Clinical Utility**: Population-specific normative WMH and ventricular ratio values for MS monitoring in this underrepresented group
 
 ---
 
@@ -248,7 +253,7 @@ matplotlib>=3.5.0
 
 ### MRI Acquisition Specifications
 
-- **Scanner**: 1.5-Tesla TOSHIBA Vantage (Canon Medical Systems)
+- **Scanner**: 1.5-Tesla TOSHIBA Vantage (Canon Medical Systems, Japan)
 - **T2-FLAIR Sequence Parameters**:
   - TR = 10,000 ms
   - TE = 100 ms
@@ -300,24 +305,25 @@ python generating_3L_masks.py \
 ```bash
 cd Phase3_model_training_and_inferencing_and_evaluation
 
-# For inference with optimal model (DeepLabV3Plus)
+# For inference with optimal model (U-Net)
 python inferencing_wmh_vent_unet_models_v3.py \
     --input_dir ../Phase1_data_preprocessing/preprocessed_output \
-    --model_path trained_models/deeplabv3plus_model \
+    --model_path trained_models/unet_model \
     --output_dir inference_results
 
 # For training new model (optional)
 python training_wmh_vent_unet_models_v3.py \
-    --architecture deeplabv3plus \
+    --architecture unet \
     --config config/training_config.yaml
 ```
 
 **Training Configuration:**
-- Optimizer: Adam (lr=1×10⁻⁴, β₁=0.9, β₂=0.999)
+- Optimizer: Adam (lr=2×10⁻⁴, β₁=0.9, β₂=0.999)
 - Batch size: 8
 - Epochs: 100 (early stopping patience=10)
-- Loss: Hybrid strategy (weighted categorical cross-entropy → unified focal loss)
+- Loss: Hybrid strategy (weighted categorical cross-entropy for initial 15 epochs → unified focal loss)
 - Learning rate schedule: ReduceLROnPlateau
+- Validation: 4-fold cross-validation
 
 ### Phase 4: Neuroanatomical Processing
 
@@ -343,9 +349,9 @@ python excel_filler_brain_TIA.py \
 **Extracted Metrics:**
 - Total ventricular area and ratio
 - Total WMH area and ratio
-- PEWMH, PAWMH, JCWMH areas and proportions
+- PEWMH, DWMH, JCWMH areas and proportions
 - Age and gender stratification
-- Normalized values (% of total intracranial area)
+- Normalized values (% of total brain area)
 
 ### Phase 5: Statistical Analysis
 
@@ -359,8 +365,8 @@ python comprehensive_statistical_analysis_v3.py \
 **Statistical Methods:**
 - Age stratification: 5 groups (18-29, 30-39, 40-49, 50-59, 60+ years)
 - Normality testing: Shapiro-Wilk
-- Group comparisons: Independent t-tests / Mann-Whitney U tests
-- Effect sizes: Cohen's d / Pearson's r
+- Group comparisons: Independent t-tests (where CLT applies and CV<1.0) / Mann-Whitney U tests
+- Effect sizes: Cohen's d / rank-biserial correlation (r)
 - Correlation analysis: Spearman correlation matrices
 - Multiple comparison correction: Bonferroni adjustment
 
@@ -379,14 +385,14 @@ python comprehensive_statistical_analysis_v3.py \
 
 ### Segmentation Accuracy
 
-**DeepLabV3Plus on Test Set (350 images):**
-- Ventricles: Precision=0.924, Recall=0.876, DSC=0.900
-- WMH: Precision=0.909, Recall=0.906, DSC=0.907
-- Overall: DSC=0.903, HD95=2.5mm
+**U-Net on Test Set (4-fold cross-validation):**
+- Overall DSC: 88.8±0.5%
+- HD95: 2.8±0.0mm
+- Lesion-wise F1-score: 77.4±1.4%
 
 **Clinical Acceptability:**
 - ✅ Suitable for population-level analysis
-- ✅ Consistent performance across age groups
+- ✅ Consistent performance via cross-validation
 - ✅ Robust to clinical imaging variability
 
 ---
@@ -395,8 +401,8 @@ python comprehensive_statistical_analysis_v3.py \
 
 ### Research Contributions
 
-- **Population-Specific Data**: First comprehensive MS neuroimaging study in Middle Eastern population
-- **Normative Values**: Baseline references for Iranian/Middle Eastern MS patients
+- **Population-Specific Data**: Large-scale MS neuroimaging study in Middle Eastern population
+- **Normative Values**: Preliminary reference ranges for WMH and ventricular ratios in Iranian/Middle Eastern MS patients
 - **Methodological Framework**: Scalable approach for large-scale neuroimaging studies
 - **Open-Source Tools**: Reproducible pipeline for global MS research community
 
@@ -410,29 +416,30 @@ python comprehensive_statistical_analysis_v3.py \
 ### Future Research Directions
 
 1. **Longitudinal Studies**: Track individual patient trajectories
-2. **Multi-Modal Integration**: Combine FLAIR with DTI, T1-weighted sequences
-3. **Clinical Correlation**: Integrate with EDSS scores and disease duration
-4. **Genetic Association**: Link imaging biomarkers with genetic profiles
-5. **Multi-Center Expansion**: Validate across diverse Iranian regions
+2. **Higher-Resolution Protocols**: Volumetric analysis with ≤3mm slice thickness / isotropic acquisition
+3. **Multi-Modal Integration**: Combine FLAIR with DTI, T1-weighted sequences
+4. **Clinical Correlation**: Integrate with EDSS scores and disease duration
+5. **Genetic Association**: Link imaging biomarkers with genetic profiles (e.g., HLA-DRB1*1501)
+6. **Multi-Center Expansion**: Validate across diverse Iranian regions
 
 ---
 
 ## 📚 Documentation
 
 ### Available Resources
-- **[Article Manuscript](p4_Manuscript_BAWIL2025.docx)**: Complete research article
+- **[Article Manuscript](p4_Manuscript_BAWIL2025_R1.pdf)**: Complete research article (Revised)
 - **[Repository Explanation](repo_explanation.docx)**: Detailed methodology
 - **[Figure Collection](Article_Figures/)**: All 7 publication-quality figures
 - **[Statistical Tables](Article_Tables/)**: Comprehensive demographic and performance tables
 
 ### Key Figures
-- **Figure 1**: Expert manual annotation examples
-- **Figure 2**: Study population demographics
-- **Figure 3**: Age-stratified ventricular burden
-- **Figure 4**: Age-related correlation analysis
-- **Figure 5**: WMH burden comparison
-- **Figure 6**: Anatomical lesion distribution
-- **Figure 7**: Correlation matrices (HC vs MS)
+- **Figure 1**: Expert manual annotation examples (FLAIR with ground truth overlays)
+- **Figure 2**: Study population age distribution histograms by group and gender
+- **Figure 3**: Age-stratified ventricular area analysis (stacked area plots)
+- **Figure 4**: Age-related scatter plots for ventricular and WMH ratios by gender
+- **Figure 5**: Age-stratified lesion (WMH) area analysis
+- **Figure 6**: Anatomical lesion distribution in MS patients (PEWMH, DWMH, JCWMH)
+- **Figure 7**: Spearman correlation matrices (HC vs MS)
 
 ---
 
@@ -467,11 +474,11 @@ mypy src/
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{bashiri2025deeplearning,
-    title={Deep Learning-Based Neuroanatomical Profiling Reveals Detailed Brain Changes: A Large-Scale Multiple Sclerosis Study},
+@article{bashiri2026deeplearning,
+    title={Deep Learning-Based Neuroanatomical Profiling Reveals Population-Specific Brain Changes in Multiple Sclerosis: A Large-Scale Middle Eastern Study},
     author={Bashiri Bawil, Mahdi and Shamsi, Mousa and Shakeri Bavil, Abolhassan},
     journal={Under Review - BMC Medical Imaging},
-    year={2025},
+    year={2026},
     note={Ethics Approval: IR.TBZMED.REC.1402.902},
     url={https://github.com/Mahdi-Bashiri/MS-DeepBrain-Study}
 }
@@ -505,8 +512,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **Golghasht Medical Imaging Center** for clinical dataset and imaging resources
-- **Expert neuroradiologists** for manual annotations and validation
+- **Golghasht Medical Imaging Center** for clinical dataset and imaging resources (Eng. Mehrdad Rahbarpour, Eng. Azad Ahmadi, Dr. Aydin Asadi)
+- **Expert neuroradiologist** for manual annotations and validation
 - **Study participants** (381 MS patients, 1,000 healthy volunteers)
 - **Tabriz University of Medical Sciences** for institutional support and ethics oversight
 - **MSSEG 2016 Challenge** for public validation dataset
@@ -521,17 +528,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Issues**: [GitHub Issues](https://github.com/Mahdi-Bashiri/MS-DeepBrain-Study/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Mahdi-Bashiri/MS-DeepBrain-Study/discussions)
 
-### Research Inquiries
-For research collaborations, clinical implementations, or dataset access, please use GitHub communication channels or contact through institutional email.
+### Corresponding Author
+**Mousa Shamsi** — shamsi@sut.ac.ir  
+Biomedical Engineering Faculty, Sahand University of Technology, Tabriz, Iran
 
 ---
 
 ## 🌟 Impact Statement
 
-This research represents a contribution to understanding Multiple Sclerosis through neuroimaging in an underrepresented population. By providing:
+This research contributes to understanding Multiple Sclerosis through neuroimaging in an underrepresented population. By providing:
 
 - **Open-source tools** for automated MS lesion analysis
-- **Population-specific normative data** for Middle Eastern populations
+- **Preliminary population-specific normative data** for Middle Eastern populations
 - **Methodological framework** for large-scale neuroimaging studies
 - **Clinical translation pathway** from research to practice
 
@@ -543,4 +551,4 @@ We aim to support improved patient care and advance global MS research initiativ
 
 ---
 
-*Version: 2.0 | Last Updated: December 2024 | Status: Manuscript Under Review*
+*Version: 2.1 (Revised) | Last Updated: April 2026 | Status: Manuscript Under Review (R1)*
