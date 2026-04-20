@@ -113,15 +113,18 @@ The repository follows a **5-phase pipeline architecture**:
 │   │   ├── trans_unet_model/
 │   │   └── deeplabv3plus_model/
 │   ├── training_wmh_vent_unet_models_v3.py    # Model training
-│   └── inferencing_wmh_vent_unet_models_v3.py # Automated inference
+│   └── inferencing_wmh_vent_unet_models_v3.py    # Automated inference
 ├── 📁 Phase4_data_processing/       # Quantitative analysis
-│   ├── brain_mri_analysis_results_PROCESSED_updated.xlsx
+│   ├── brain_mri_analysis_results_ALL.xlsx
 │   ├── core_processing.py          # Neuroanatomical lesion classification
 │   ├── excel_extractor.py          # Data extraction
-│   └── excel_filler_brain_TIA.py   # Brain area normalization
-├── 📁 Phase5_statistical_analysis/  # Comprehensive statistics
-│   ├── 📁 csv_analysis_outputs_v3/ # Statistical results
-│   └── comprehensive_statistical_analysis_v3.py # Statistical pipeline
+│   └── excel_filler_brain_TIA.py    # Brain area normalization
+├── 📁 Phase5_statistical_analysis/    # Comprehensive statistics
+│   ├── 📁 csv_analysis_outputs_no_outlier_v4/    # Statistical results
+│   ├── brain_mri_analysis_results_ALL.csv          # Extracted Data from All Cohort for Analyses
+│   ├── Patient_Flair_data_HC.csv   # Demography of Healthy Controls 
+│   ├── Patient_Flair_data_MS.csv   # Demography of MS Patients
+│   └── p4_excel_analysis_developed.py    # Statistical pipeline
 ├── 📄 our_article_DOI.md           # Citation information
 ├── 📄 repo_explanation.docx        # Detailed methodology
 └── 📄 README.md                    # This file
