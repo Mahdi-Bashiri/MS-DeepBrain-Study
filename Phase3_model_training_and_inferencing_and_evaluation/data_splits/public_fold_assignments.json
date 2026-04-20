@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "dataset": "Public_MSSEG",
+    "total_patients": 15,
+    "test_patients": 3,
+    "trainval_patients": 12,
+    "target_split": "60/20/20 (train/val/test)",
+    "n_folds": 4,
+    "random_seed": 42,
+    "center_balanced_test": true
+  },
+  "test_set": {
+    "patients": [
+      "c01p04",
+      "c07p05",
+      "c08p04"
+    ],
+    "n_patients": 3
+  },
+  "folds": {
+    "fold_0": {
+      "train_patients": [
+        "c08p03",
+        "c01p01",
+        "c08p02",
+        "c07p03",
+        "c07p04",
+        "c01p02",
+        "c07p01",
+        "c08p05",
+        "c07p02"
+      ],
+      "val_patients": [
+        "c01p05",
+        "c08p01",
+        "c01p03"
+      ],
+      "n_train": 9,
+      "n_val": 3
+    },
+    "fold_1": {
+      "train_patients": [
+        "c01p05",
+        "c08p01",
+        "c01p03",
+        "c07p03",
+        "c07p04",
+        "c01p02",
+        "c07p01",
+        "c08p05",
+        "c07p02"
+      ],
+      "val_patients": [
+        "c08p03",
+        "c01p01",
+        "c08p02"
+      ],
+      "n_train": 9,
+      "n_val": 3
+    },
+    "fold_2": {
+      "train_patients": [
+        "c01p05",
+        "c08p01",
+        "c01p03",
+        "c08p03",
+        "c01p01",
+        "c08p02",
+        "c07p01",
+        "c08p05",
+        "c07p02"
+      ],
+      "val_patients": [
+        "c07p03",
+        "c07p04",
+        "c01p02"
+      ],
+      "n_train": 9,
+      "n_val": 3
+    },
+    "fold_3": {
+      "train_patients": [
+        "c01p05",
+        "c08p01",
+        "c01p03",
+        "c08p03",
+        "c01p01",
+        "c08p02",
+        "c07p03",
+        "c07p04",
+        "c01p02"
+      ],
+      "val_patients": [
+        "c07p01",
+        "c08p05",
+        "c07p02"
+      ],
+      "n_train": 9,
+      "n_val": 3
+    }
+  }
+}
