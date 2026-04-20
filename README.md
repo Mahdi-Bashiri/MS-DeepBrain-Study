@@ -551,4 +551,4 @@ We aim to support improved patient care and advance global MS research initiativ
 
 ---
 
-*Version: 2.1 (Revised) | Last Updated: April 2026 | Status: Manuscript Under Review (R1)*
+*Version: 3.0 (Revised) | Last Updated: April 2026 | Status: Manuscript Under Review (R1)*
