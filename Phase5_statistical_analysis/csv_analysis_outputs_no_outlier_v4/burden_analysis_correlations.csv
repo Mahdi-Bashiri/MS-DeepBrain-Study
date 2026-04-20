@@ -1,0 +1,13 @@
+Panel,Measure,Group,N,Age_Burden_Correlation,Correlation_Strength,P_Value_Available
+A,VentricleRatio,HC,1000,0.207,Weak,No (requires statistical testing)
+A,VentricleRatio,MS,381,0.373,Moderate,No (requires statistical testing)
+B,WMHRatio,HC,1000,0.085,Negligible,No (requires statistical testing)
+B,WMHRatio,MS,381,0.224,Weak,No (requires statistical testing)
+C,VentricleRatio,HC,673,0.172,Weak,No (requires statistical testing)
+C,VentricleRatio,MS,273,0.370,Moderate,No (requires statistical testing)
+D,WMHRatio,HC,673,0.103,Weak,No (requires statistical testing)
+D,WMHRatio,MS,273,0.227,Weak,No (requires statistical testing)
+E,VentricleRatio,HC,327,0.269,Weak,No (requires statistical testing)
+E,VentricleRatio,MS,108,0.384,Moderate,No (requires statistical testing)
+F,WMHRatio,HC,327,0.055,Negligible,No (requires statistical testing)
+F,WMHRatio,MS,108,0.215,Weak,No (requires statistical testing)

@@ -1,0 +1,19 @@
+MS Brain MRI Statistical Analysis Summary
+==================================================
+
+analysis_date: 2026-04-16 00:01:06
+total_patients: 1381
+hc_patients: 1000
+ms_patients: 381
+age_range: 18-74
+output_directory: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4
+
+Files generated:
+- publication_figure_1_demographics.png
+- publication_figure_2_burden_analysis.png
+- ventricular_burden_analysis.png
+- total_lesion_burden_analysis.png
+- ms_subgroup_analysis.png
+- correlation_analysis.png
+- table1_baseline_characteristics.csv
+- analysis_summary.txt

@@ -1,0 +1,1513 @@
+C:\Users\SAI\PycharmProjects\pythonProject\.venv\Scripts\python.exe E:\MBashiri\ours_articles\Paper#4\Development\p4_excel_analysis_developed.py 
+MS Brain MRI Statistical Analysis Framework
+Starting analysis...
+
+MS Brain MRI Statistical Analysis - Complete Pipeline
+============================================================
+Loading data from: D:\TEMP_P4\brain_mri_analysis_results_ALL.csv
+Data loaded successfully: 1381 patients, 11 features
+  [Normalisation] Skull/head-mask column 'TotalSkullArea' found — skull-normalised ratios will be computed alongside brain-normalised ratios.
+Data loaded successfully: 1381 patients
+Columns available: ['PatientID', 'PatientAge', 'PatientSex', 'StudyGroup', 'TotalSkullArea', 'TotalBrainArea', 'TotalVentricleArea', 'TotalWMHArea', 'TotalPeriArea', 'TotalDeepArea', 'TotalJuxtArea', 'AgeGroup', 'Gender', 'VentricleRatio', 'VentricleRatio_Skull', 'WMHRatio', 'WMHRatio_Skull', 'peri_wmh_ratio', 'deep_wmh_ratio', 'juxta_wmh_ratio', 'peri_wmh_ratio_brain', 'peri_wmh_ratio_skull', 'deep_wmh_ratio_brain', 'deep_wmh_ratio_skull', 'juxta_wmh_ratio_brain', 'juxta_wmh_ratio_skull']
+
+Data Summary:
+----------------------------------------
+HC patients: 1000
+MS patients: 381
+Age range: 18 - 74 years
+Male patients: 946
+Female patients: 435
+
+Running comprehensive statistical analysis...
+
+================================================================================
+COMPREHENSIVE STATISTICAL REPORT
+================================================================================
+
+============================================================
+DEMOGRAPHIC ANALYSIS
+============================================================
+
+Demographic Summary:
+                  PatientAge                       PatientID
+                       count   mean    std min max     count
+StudyGroup Gender                                           
+HC         Female        673  34.69   9.84  18  74       673
+           Male          327  34.79  10.76  18  72       327
+MS         Female        273  37.66  10.14  18  68       273
+           Male          108  36.57  10.47  18  60       108
+
+Age Distribution by Group and Gender:
+Gender               Female  Male
+StudyGroup AgeGroup              
+HC         18-29        205   110
+           30-39        269   110
+           40-49        144    77
+           50-59         48    24
+           60+            6     5
+MS         18-29         61    29
+           30-39        101    37
+           40-49         74    29
+           50-59         33    12
+           60+            4     1
+
+Age comparison (HC vs MS) (Male): t-statistic = -1.508, p-value = 0.13239164470729792
+Age comparison (HC vs MS) (Female): t-statistic = -4.158, p-value = 3.495638702006641e-05
+
+Age comparison (HC vs MS) (All): t-statistic = -4.289, p-value = 1.9239472530794248e-05
+Gender distribution (HC vs MS): χ² = 2.226, p-value = 0.135719998925275
+
+============================================================
+VENTRICULAR BURDEN ANALYSIS
+============================================================
+
+================================================================================
+COMPREHENSIVE DOCUMENTATION GENERATED
+================================================================================
+Documentation saved to: ventricular_analysis_documentation.txt
+File contains detailed explanation of:
+- Enhanced statistical testing methodology
+- Normality assessment and test selection
+- Effect size calculations and interpretation
+- Figure interpretation and clinical relevance
+
+================================================================================
+TABLE 1: DETAILED STATISTICS BY GROUP, AGE, AND GENDER
+================================================================================
+
+Ventricular Area (mm²):
+------------------------------------------------------------
+Group Age Group Gender   N    Mean      SD     Min      Max  Median  IQR_25  IQR_75
+   HC     18-29   Male 110 2562.76  871.32  476.00  6322.00 2459.50 2023.84 2895.16
+   HC     18-29 Female 205 2245.02  850.38  792.00  6033.00 2102.00 1676.81 2527.19
+   HC     30-39   Male 110 2813.69 1029.68 1197.00  6137.00 2521.00 2006.16 3035.84
+   HC     30-39 Female 269 2438.02  872.12  757.00  5922.00 2311.00 1874.94 2747.06
+   HC     40-49   Male  77 2807.83  848.19 1349.00  4949.00 2605.00 2180.90 3029.10
+   HC     40-49 Female 144 2668.18  917.34  838.00  5646.00 2622.00 2163.33 3080.67
+   HC     50-59   Male  24 3501.42 1207.15 1460.00  6063.00 3394.50 2790.92 3998.08
+   HC     50-59 Female  48 2535.79  778.14 1245.00  4391.00 2372.50 1983.43 2761.57
+   HC       60+   Male   5 4237.60 2671.16 2228.00  8778.00 3230.00 1894.42 4565.58
+   HC       60+ Female   6 3117.33  951.69 1923.00  4632.00 2896.00 2420.16 3371.84
+   MS     18-29   Male  29 3439.97 1369.87 1770.00  8047.00 3357.00 2672.07 4041.93
+   MS     18-29 Female  61 2894.75 1037.32  928.00  6445.00 2812.00 2293.34 3330.66
+   MS     30-39   Male  37 3933.03 1589.78 1820.00  8205.00 3800.00 3005.11 4594.89
+   MS     30-39 Female 101 3562.48 1795.23  289.00 13472.00 3203.00 2305.38 4100.62
+   MS     40-49   Male  29 4118.41 2056.42 1495.00  9963.00 3418.00 2389.79 4446.21
+   MS     40-49 Female  74 4113.66 1935.59 1613.00 13139.00 3667.50 2699.71 4635.29
+   MS     50-59   Male  12 5135.08 1574.45 1899.00  7662.00 5511.00 4723.78 6298.22
+   MS     50-59 Female  33 4778.58 1940.86 2134.00 10043.00 4231.00 3260.57 5201.43
+   MS       60+   Male   1 5721.00     N/A 5721.00  5721.00 5721.00     nan     nan
+   MS       60+ Female   4 5525.50 1833.12 3876.00  8139.00 5043.50 4126.94 5960.06
+Enhanced table saved to: ventricular_area_detailed_stats.csv
+
+Ventricular Ratio (%):
+------------------------------------------------------------
+Group Age Group Gender   N Mean   SD  Min  Max Median IQR_25 IQR_75
+   HC     18-29   Male 110 1.07 0.34 0.26 2.67   1.02   0.85   1.19
+   HC     18-29 Female 205 1.06 0.38 0.39 2.72   0.99   0.80   1.18
+   HC     30-39   Male 110 1.18 0.42 0.63 2.40   1.08   0.87   1.29
+   HC     30-39 Female 269 1.15 0.40 0.36 2.94   1.09   0.89   1.29
+   HC     40-49   Male  77 1.21 0.35 0.57 2.19   1.17   0.99   1.34
+   HC     40-49 Female 144 1.25 0.41 0.45 2.52   1.23   1.02   1.43
+   HC     50-59   Male  24 1.51 0.52 0.61 2.45   1.41   1.15   1.67
+   HC     50-59 Female  48 1.23 0.36 0.63 2.15   1.14   0.96   1.32
+   HC       60+   Male   5 1.84 1.09 0.96 3.66   1.42   0.87   1.96
+   HC       60+ Female   6 1.47 0.33 1.00 1.98   1.44   1.27   1.61
+   MS     18-29   Male  29 1.47 0.55 0.84 3.28   1.39   1.12   1.67
+   MS     18-29 Female  61 1.36 0.48 0.48 3.13   1.33   1.09   1.57
+   MS     30-39   Male  37 1.72 0.67 0.77 3.42   1.55   1.22   1.89
+   MS     30-39 Female 101 1.74 0.83 0.15 5.73   1.54   1.12   1.95
+   MS     40-49   Male  29 1.91 0.98 0.61 4.56   1.49   1.00   1.98
+   MS     40-49 Female  74 2.01 0.91 0.73 5.72   1.82   1.36   2.28
+   MS     50-59   Male  12 2.37 0.70 0.88 3.19   2.60   2.25   2.95
+   MS     50-59 Female  33 2.37 0.97 1.03 4.37   1.94   1.45   2.42
+   MS       60+   Male   1 2.87  N/A 2.87 2.87   2.87    nan    nan
+   MS       60+ Female   4 2.77 1.02 1.92 4.25   2.45   1.94   2.96
+Enhanced table saved to: ventricular_ratio_detailed_stats.csv
+
+Ventricular Ratio-Skull (%):
+------------------------------------------------------------
+Group Age Group Gender   N Mean   SD  Min  Max Median IQR_25 IQR_75
+   HC     18-29   Male 110 0.59 0.19 0.14 1.36   0.56   0.46   0.65
+   HC     18-29 Female 205 0.57 0.21 0.22 1.53   0.54   0.43   0.64
+   HC     30-39   Male 110 0.63 0.22 0.33 1.33   0.59   0.47   0.70
+   HC     30-39 Female 269 0.61 0.21 0.20 1.58   0.58   0.47   0.68
+   HC     40-49   Male  77 0.64 0.19 0.34 1.12   0.58   0.49   0.67
+   HC     40-49 Female 144 0.66 0.22 0.26 1.34   0.65   0.54   0.76
+   HC     50-59   Male  24 0.79 0.27 0.33 1.38   0.73   0.59   0.87
+   HC     50-59 Female  48 0.64 0.20 0.33 1.12   0.60   0.50   0.70
+   HC       60+   Male   5 0.98 0.62 0.51 2.05   0.70   0.39   1.02
+   HC       60+ Female   6 0.79 0.19 0.53 1.06   0.80   0.70   0.89
+   MS     18-29   Male  29 0.77 0.29 0.44 1.70   0.73   0.59   0.87
+   MS     18-29 Female  61 0.72 0.26 0.25 1.57   0.69   0.56   0.82
+   MS     30-39   Male  37 0.91 0.38 0.42 2.06   0.76   0.57   0.95
+   MS     30-39 Female 101 0.90 0.46 0.07 3.49   0.82   0.59   1.04
+   MS     40-49   Male  29 0.95 0.46 0.37 2.23   0.77   0.54   1.00
+   MS     40-49 Female  74 1.03 0.48 0.37 3.20   0.97   0.73   1.21
+   MS     50-59   Male  12 1.20 0.35 0.46 1.74   1.33   1.15   1.50
+   MS     50-59 Female  33 1.19 0.47 0.50 2.37   1.08   0.84   1.32
+   MS       60+   Male   1 1.38  N/A 1.38 1.38   1.38    nan    nan
+   MS       60+ Female   4 1.38 0.50 0.96 2.11   1.23   0.98   1.48
+Enhanced table saved to: ventricular_ratio_skull_detailed_stats.csv
+
+================================================================================
+TABLE 2: STATISTICAL COMPARISONS (HC vs MS) - ENHANCED
+================================================================================
+
+================================================================================
+TABLE 3: PLOT DATA (MEANS AND CONTRIBUTIONS BY AGE GROUP)
+================================================================================
+
+Ventricular Area - Mean Values and Contributions Used in Plot (mm²):
+-------------------------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5      2562.76        2245.02          2355.98               894.93                1461.05      3439.97        2894.75          3070.43              1108.43                1962.00        110          205         29           61
+    30-39       34.5      2813.69        2438.02          2547.06               816.64                1730.42      3933.03        3562.48          3661.83              1054.51                2607.32        110          269         37          101
+    40-49       44.5      2807.83        2668.18          2716.84               978.29                1738.54      4118.41        4113.66          4115.00              1159.55                2955.45         77          144         29           74
+    50-59       54.5      3501.42        2535.79          2857.67              1167.14                1690.53      5135.08        4778.58          4873.64              1369.36                3504.29         24           48         12           33
+      60+       64.5      4237.60        3117.33          3626.55              1926.18                1700.36      5721.00        5525.50          5564.60              1144.20                4420.40          5            6          1            4
+Enhanced plot data saved to: ventricular_area_plot_data.csv
+
+Ventricular Ratio - Mean Values and Contributions Used in Plot (%):
+-------------------------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5         1.07           1.06             1.06                 0.37                   0.69         1.47           1.36             1.39                 0.47                   0.92        110          205         29           61
+    30-39       34.5         1.18           1.15             1.16                 0.34                   0.82         1.72           1.74             1.73                 0.46                   1.27        110          269         37          101
+    40-49       44.5         1.21           1.25             1.24                 0.42                   0.81         1.91           2.01             1.98                 0.54                   1.44         77          144         29           74
+    50-59       54.5         1.51           1.23             1.32                 0.50                   0.82         2.37           2.37             2.37                 0.63                   1.74         24           48         12           33
+      60+       64.5         1.84           1.47             1.63                 0.83                   0.80         2.87           2.77             2.79                 0.57                   2.21          5            6          1            4
+Enhanced plot data saved to: ventricular_ratio_plot_data.csv
+
+Ventricular Ratio-Skull - Mean Values and Contributions Used in Plot (%):
+-------------------------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5         0.59           0.57             0.58                 0.21                   0.37         0.77           0.72             0.74                 0.25                   0.49        110          205         29           61
+    30-39       34.5         0.63           0.61             0.62                 0.18                   0.44         0.91           0.90             0.90                 0.24                   0.66        110          269         37          101
+    40-49       44.5         0.64           0.66             0.66                 0.22                   0.43         0.95           1.03             1.01                 0.27                   0.74         77          144         29           74
+    50-59       54.5         0.79           0.64             0.69                 0.26                   0.43         1.20           1.19             1.19                 0.32                   0.87         24           48         12           33
+      60+       64.5         0.98           0.79             0.88                 0.45                   0.43         1.38           1.38             1.38                 0.28                   1.11          5            6          1            4
+Enhanced plot data saved to: ventricular_ratio_skull_plot_data.csv
+
+================================================================================
+TABLE 4: PROPORTIONAL CONTRIBUTION ANALYSIS
+================================================================================
+
+Ventricular Area - Proportional Contributions (mm²):
+----------------------------------------------------------------------
+Group Age_Group Combined_Mean Male_Contribution Female_Contribution Male_Prop_of_Mean Female_Prop_of_Mean Male_Sample_Prop Female_Sample_Prop  Total_N
+   HC     18-29       2355.98            894.93             1461.05             38.0%               62.0%            34.9%              65.1%      315
+   HC     30-39       2547.06            816.64             1730.42             32.1%               67.9%            29.0%              71.0%      379
+   HC     40-49       2716.84            978.29             1738.54             36.0%               64.0%            34.8%              65.2%      221
+   HC     50-59       2857.67           1167.14             1690.53             40.8%               59.2%            33.3%              66.7%       72
+   HC       60+       3626.55           1926.18             1700.36             53.1%               46.9%            45.5%              54.5%       11
+   MS     18-29       3070.43           1108.43             1962.00             36.1%               63.9%            32.2%              67.8%       90
+   MS     30-39       3661.83           1054.51             2607.32             28.8%               71.2%            26.8%              73.2%      138
+   MS     40-49       4115.00           1159.55             2955.45             28.2%               71.8%            28.2%              71.8%      103
+   MS     50-59       4873.64           1369.36             3504.29             28.1%               71.9%            26.7%              73.3%       45
+   MS       60+       5564.60           1144.20             4420.40             20.6%               79.4%            20.0%              80.0%        5
+Contribution analysis saved to: ventricular_area_contributions.csv
+
+Ventricular Ratio - Proportional Contributions (%):
+----------------------------------------------------------------------
+Group Age_Group Combined_Mean Male_Contribution Female_Contribution Male_Prop_of_Mean Female_Prop_of_Mean Male_Sample_Prop Female_Sample_Prop  Total_N
+   HC     18-29          1.06              0.37                0.69             35.2%               64.8%            34.9%              65.1%      315
+   HC     30-39          1.16              0.34                0.82             29.5%               70.5%            29.0%              71.0%      379
+   HC     40-49          1.24              0.42                0.81             34.1%               65.9%            34.8%              65.2%      221
+   HC     50-59          1.32              0.50                0.82             38.2%               61.8%            33.3%              66.7%       72
+   HC       60+          1.63              0.83                0.80             51.1%               48.9%            45.5%              54.5%       11
+   MS     18-29          1.39              0.47                0.92             33.9%               66.1%            32.2%              67.8%       90
+   MS     30-39          1.73              0.46                1.27             26.6%               73.4%            26.8%              73.2%      138
+   MS     40-49          1.98              0.54                1.44             27.1%               72.9%            28.2%              71.8%      103
+   MS     50-59          2.37              0.63                1.74             26.7%               73.3%            26.7%              73.3%       45
+   MS       60+          2.79              0.57                2.21             20.6%               79.4%            20.0%              80.0%        5
+Contribution analysis saved to: ventricular_ratio_contributions.csv
+
+================================================================================
+TABLE 6: STACKED AREA VALUES (FOR AREA CHART)
+================================================================================
+
+Ventricular Area - Stacked Values (mm²):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29        0.00 to 2562.76           2562.76 to 4807.79      4807.79           2562.76             2245.02
+   HC     30-39        0.00 to 2813.69           2813.69 to 5251.71      5251.71           2813.69             2438.02
+   HC     40-49        0.00 to 2807.83           2807.83 to 5476.01      5476.01           2807.83             2668.18
+   HC     50-59        0.00 to 3501.42           3501.42 to 6037.21      6037.21           3501.42             2535.79
+   HC       60+        0.00 to 4237.60           4237.60 to 7354.93      7354.93           4237.60             3117.33
+   MS     18-29        0.00 to 3439.97           3439.97 to 6334.72      6334.72           3439.97             2894.75
+   MS     30-39        0.00 to 3933.03           3933.03 to 7495.50      7495.50           3933.03             3562.48
+   MS     40-49        0.00 to 4118.41           4118.41 to 8232.08      8232.08           4118.41             4113.66
+   MS     50-59        0.00 to 5135.08           5135.08 to 9913.66      9913.66           5135.08             4778.58
+   MS       60+        0.00 to 5721.00          5721.00 to 11246.50     11246.50           5721.00             5525.50
+Stacked data saved to: ventricular_area_stacked_data.csv
+
+Ventricular Ratio - Stacked Values (%):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29           0.00 to 1.07                 1.07 to 2.13         2.13              1.07                1.06
+   HC     30-39           0.00 to 1.18                 1.18 to 2.34         2.34              1.18                1.15
+   HC     40-49           0.00 to 1.21                 1.21 to 2.46         2.46              1.21                1.25
+   HC     50-59           0.00 to 1.51                 1.51 to 2.74         2.74              1.51                1.23
+   HC       60+           0.00 to 1.84                 1.84 to 3.30         3.30              1.84                1.47
+   MS     18-29           0.00 to 1.47                 1.47 to 2.83         2.83              1.47                1.36
+   MS     30-39           0.00 to 1.72                 1.72 to 3.45         3.45              1.72                1.74
+   MS     40-49           0.00 to 1.91                 1.91 to 3.91         3.91              1.91                2.01
+   MS     50-59           0.00 to 2.37                 2.37 to 4.73         4.73              2.37                2.37
+   MS       60+           0.00 to 2.87                 2.87 to 5.63         5.63              2.87                2.77
+Stacked data saved to: ventricular_ratio_stacked_data.csv
+
+Ventricular Ratio-Skull - Stacked Values (%):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29           0.00 to 0.59                 0.59 to 1.16         1.16              0.59                0.57
+   HC     30-39           0.00 to 0.63                 0.63 to 1.25         1.25              0.63                0.61
+   HC     40-49           0.00 to 0.64                 0.64 to 1.30         1.30              0.64                0.66
+   HC     50-59           0.00 to 0.79                 0.79 to 1.44         1.44              0.79                0.64
+   HC       60+           0.00 to 0.98                 0.98 to 1.77         1.77              0.98                0.79
+   MS     18-29           0.00 to 0.77                 0.77 to 1.50         1.50              0.77                0.72
+   MS     30-39           0.00 to 0.91                 0.91 to 1.81         1.81              0.91                0.90
+   MS     40-49           0.00 to 0.95                 0.95 to 1.98         1.98              0.95                1.03
+   MS     50-59           0.00 to 1.20                 1.20 to 2.38         2.38              1.20                1.19
+   MS       60+           0.00 to 1.38                 1.38 to 2.76         2.76              1.38                1.38
+Stacked data saved to: ventricular_ratio_skull_stacked_data.csv
+
+================================================================================
+ENHANCED STATISTICAL TABLES GENERATED!
+================================================================================
+Generated files include:
+• Enhanced descriptive statistics with IQR
+• Comprehensive statistical comparison results
+• Detailed plot data with contributions
+• Proportional contribution analysis
+• Effect size interpretations
+• All tables saved as CSV files for further analysis
+================================================================================
+
+==================================================
+STATISTICAL COMPARISONS (HC vs MS)
+==================================================
+
+Ventricular Area comparison:
+HC: N=1000, mean ± SD = 2559.61 ± 946.88 mm²
+MS: N=381, mean ± SD = 3812.74 ± 1791.07 mm²
+Normality tests: HC p=0.000, MS p=0.000
+Independent t-test: t-statistic = -16.808, p-value = 8.081012632267967e-58
+Cohen's d = 1.012
+
+Ventricular Ratio comparison:
+HC: N=1000, mean ± SD = 1.16 ± 0.41%
+MS: N=381, mean ± SD = 1.81 ± 0.85%
+Normality tests: HC p=0.000, MS p=0.000
+Independent t-test: t-statistic = -18.920, p-value = 3.687338207018337e-71
+Cohen's d = 1.139
+
+============================================================
+TOTAL LESION BURDEN ANALYSIS
+============================================================
+
+================================================================================
+COMPREHENSIVE LESION BURDEN DOCUMENTATION GENERATED
+================================================================================
+Documentation saved to: lesion_burden_analysis_documentation.txt
+File contains detailed explanation of figure, methods, and clinical interpretation.
+- Enhanced statistical testing methodology
+- Normality assessment and test selection
+- Effect size calculations and interpretation
+- Figure interpretation and clinical relevance
+
+================================================================================
+TABLE 1: DETAILED STATISTICS BY GROUP, AGE, AND GENDER
+================================================================================
+
+WMH Area (mm²):
+----------------------------------------------------------------------
+Group Age Group Gender   N    Mean      SD     Min     Max  Median  IQR_25  IQR_75
+   HC     18-29   Male 110   24.87   26.63    0.00  150.00   19.00    5.68   32.32
+   HC     18-29 Female 205   21.34   22.91    0.00  121.00   14.00    2.55   25.45
+   HC     30-39   Male 110   26.88   32.45    0.00  262.00   19.00    2.77   35.23
+   HC     30-39 Female 269   19.56   23.29    0.00  183.00   12.00    0.35   23.65
+   HC     40-49   Male  77   29.58   31.36    0.00  139.00   20.00    4.32   35.68
+   HC     40-49 Female 144   23.95   26.95    0.00  189.00   17.00    3.52   30.48
+   HC     50-59   Male  24   26.67   31.92    0.00  122.00   17.00    1.04   32.96
+   HC     50-59 Female  48   29.54   25.57    0.00  103.00   23.50   10.72   36.28
+   HC       60+   Male   5   21.20   11.90    0.00   28.00   26.00   20.05   31.95
+   HC       60+ Female   6   36.67   20.78    0.00   56.00   40.50   30.11   50.89
+   MS     18-29   Male  29  718.34  615.61    1.00 2215.00  568.00  260.19  875.81
+   MS     18-29 Female  61  651.77 1285.52    0.00 9440.00  336.00 -306.76  978.76
+   MS     30-39   Male  37 1543.57 1746.02    8.00 7581.00  806.00  -67.01 1679.01
+   MS     30-39 Female 101 1244.83 1513.50   25.00 6303.00  564.00 -192.75 1320.75
+   MS     40-49   Male  29 1330.03 1359.64   37.00 5043.00  901.00  221.18 1580.82
+   MS     40-49 Female  74 1421.32 1594.94    5.00 7963.00  814.00   16.53 1611.47
+   MS     50-59   Male  12 1275.67 1068.43   84.00 2806.00 1144.50  610.29 1678.71
+   MS     50-59 Female  33 1576.85 1461.36   44.00 5927.00 1466.00  735.32 2196.68
+   MS       60+   Male   1 3125.00     N/A 3125.00 3125.00 3125.00     nan     nan
+   MS       60+ Female   4 3208.75 2566.64  276.00 5391.00 3584.00 2300.68 4867.32
+Enhanced table saved to: lesion_area_detailed_stats.csv
+
+WMH Ratio (%):
+----------------------------------------------------------------------
+Group Age Group Gender   N Mean   SD  Min  Max Median IQR_25 IQR_75
+   HC     18-29   Male 110 0.01 0.01 0.00 0.07   0.01   0.00   0.01
+   HC     18-29 Female 205 0.01 0.01 0.00 0.07   0.01   0.00   0.01
+   HC     30-39   Male 110 0.01 0.01 0.00 0.12   0.01   0.00   0.02
+   HC     30-39 Female 269 0.01 0.01 0.00 0.08   0.01   0.00   0.01
+   HC     40-49   Male  77 0.01 0.01 0.00 0.07   0.01   0.00   0.02
+   HC     40-49 Female 144 0.01 0.01 0.00 0.09   0.01   0.00   0.01
+   HC     50-59   Male  24 0.01 0.01 0.00 0.05   0.01   0.00   0.01
+   HC     50-59 Female  48 0.01 0.01 0.00 0.05   0.01   0.01   0.02
+   HC       60+   Male   5 0.01 0.01 0.00 0.01   0.01   0.01   0.01
+   HC       60+ Female   6 0.02 0.01 0.00 0.03   0.02   0.01   0.02
+   MS     18-29   Male  29 0.32 0.28 0.00 1.00   0.24   0.10   0.37
+   MS     18-29 Female  61 0.31 0.63 0.00 4.59   0.15  -0.16   0.47
+   MS     30-39   Male  37 0.69 0.80 0.00 3.50   0.37  -0.03   0.77
+   MS     30-39 Female 101 0.62 0.76 0.01 3.24   0.29  -0.09   0.67
+   MS     40-49   Male  29 0.62 0.62 0.01 2.25   0.36   0.05   0.67
+   MS     40-49 Female  74 0.71 0.82 0.00 4.03   0.41  -0.00   0.82
+   MS     50-59   Male  12 0.59 0.49 0.04 1.17   0.56   0.32   0.81
+   MS     50-59 Female  33 0.81 0.78 0.02 3.50   0.69   0.29   1.08
+   MS       60+   Male   1 1.57  N/A 1.57 1.57   1.57    nan    nan
+   MS       60+ Female   4 1.64 1.37 0.14 2.81   1.81   1.12   2.49
+Enhanced table saved to: lesion_ratio_detailed_stats.csv
+
+WMH Ratio-Skull (%):
+----------------------------------------------------------------------
+Group Age Group Gender   N Mean   SD  Min  Max Median IQR_25 IQR_75
+   HC     18-29   Male 110 0.01 0.01 0.00 0.04   0.00   0.00   0.01
+   HC     18-29 Female 205 0.01 0.01 0.00 0.03   0.00   0.00   0.01
+   HC     30-39   Male 110 0.01 0.01 0.00 0.06   0.00   0.00   0.01
+   HC     30-39 Female 269 0.00 0.01 0.00 0.05   0.00   0.00   0.01
+   HC     40-49   Male  77 0.01 0.01 0.00 0.03   0.00   0.00   0.01
+   HC     40-49 Female 144 0.01 0.01 0.00 0.05   0.00   0.00   0.01
+   HC     50-59   Male  24 0.01 0.01 0.00 0.03   0.00  -0.00   0.01
+   HC     50-59 Female  48 0.01 0.01 0.00 0.03   0.01   0.00   0.01
+   HC       60+   Male   5 0.00 0.00 0.00 0.01   0.01   0.00   0.01
+   HC       60+ Female   6 0.01 0.01 0.00 0.02   0.01   0.01   0.01
+   MS     18-29   Male  29 0.16 0.14 0.00 0.50   0.12   0.05   0.19
+   MS     18-29 Female  61 0.16 0.31 0.00 2.29   0.09  -0.07   0.24
+   MS     30-39   Male  37 0.36 0.42 0.00 1.78   0.19  -0.02   0.40
+   MS     30-39 Female 101 0.32 0.39 0.01 1.65   0.14  -0.05   0.34
+   MS     40-49   Male  29 0.30 0.30 0.01 1.16   0.22   0.07   0.37
+   MS     40-49 Female  74 0.36 0.41 0.00 1.94   0.20   0.00   0.41
+   MS     50-59   Male  12 0.30 0.25 0.02 0.64   0.27   0.15   0.40
+   MS     50-59 Female  33 0.40 0.36 0.01 1.40   0.39   0.21   0.56
+   MS       60+   Male   1 0.75  N/A 0.75 0.75   0.75    nan    nan
+   MS       60+ Female   4 0.80 0.65 0.07 1.40   0.87   0.55   1.20
+Enhanced table saved to: lesion_ratio_skull_detailed_stats.csv
+
+================================================================================
+TABLE 2: STATISTICAL COMPARISONS (HC vs MS) - ENHANCED
+================================================================================
+
+================================================================================
+TABLE 3: PLOT DATA (MEANS BY AGE GROUP)
+================================================================================
+
+WMH Area - Mean Values and Contributions Used in Plot (mm²):
+----------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5        24.87          21.34            22.57                 8.69                  13.89       718.34         651.77           673.22               231.47                 441.76        110          205         29           61
+    30-39       34.5        26.88          19.56            21.68                 7.80                  13.88      1543.57        1244.83          1324.93               413.86                 911.07        110          269         37          101
+    40-49       44.5        29.58          23.95            25.91                10.31                  15.61      1330.03        1421.32          1395.62               374.48                1021.15         77          144         29           74
+    50-59       54.5        26.67          29.54            28.58                 8.89                  19.69      1275.67        1576.85          1496.53               340.18                1156.36         24           48         12           33
+      60+       64.5        21.20          36.67            29.64                 9.64                  20.00      3125.00        3208.75          3192.00               625.00                2567.00          5            6          1            4
+Enhanced plot data saved to: lesion_area_plot_data.csv
+
+WMH Ratio - Mean Values and Contributions Used in Plot (%):
+----------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5         0.01           0.01             0.01                 0.00                   0.01         0.32           0.31             0.31                 0.10                   0.21        110          205         29           61
+    30-39       34.5         0.01           0.01             0.01                 0.00                   0.01         0.69           0.62             0.64                 0.18                   0.45        110          269         37          101
+    40-49       44.5         0.01           0.01             0.01                 0.00                   0.01         0.62           0.71             0.69                 0.17                   0.51         77          144         29           74
+    50-59       54.5         0.01           0.01             0.01                 0.00                   0.01         0.59           0.81             0.75                 0.16                   0.59         24           48         12           33
+      60+       64.5         0.01           0.02             0.01                 0.00                   0.01         1.57           1.64             1.63                 0.31                   1.31          5            6          1            4
+Enhanced plot data saved to: lesion_ratio_plot_data.csv
+
+WMH Ratio-Skull - Mean Values and Contributions Used in Plot (%):
+----------------------------------------------------------------------
+Age_Group Age_Center HC_Male_Mean HC_Female_Mean HC_Combined_Mean HC_Male_Contribution HC_Female_Contribution MS_Male_Mean MS_Female_Mean MS_Combined_Mean MS_Male_Contribution MS_Female_Contribution  HC_Male_N  HC_Female_N  MS_Male_N  MS_Female_N
+    18-29       23.5         0.01           0.01             0.01                 0.00                   0.00         0.16           0.16             0.16                 0.05                   0.11        110          205         29           61
+    30-39       34.5         0.01           0.00             0.01                 0.00                   0.00         0.36           0.32             0.33                 0.10                   0.23        110          269         37          101
+    40-49       44.5         0.01           0.01             0.01                 0.00                   0.00         0.30           0.36             0.34                 0.09                   0.26         77          144         29           74
+    50-59       54.5         0.01           0.01             0.01                 0.00                   0.01         0.30           0.40             0.37                 0.08                   0.29         24           48         12           33
+      60+       64.5         0.00           0.01             0.01                 0.00                   0.01         0.75           0.80             0.79                 0.15                   0.64          5            6          1            4
+Enhanced plot data saved to: lesion_ratio_skull_plot_data.csv
+
+================================================================================
+TABLE 4: PROPORTIONAL CONTRIBUTION ANALYSIS
+================================================================================
+
+Lesion Area - Proportional Contributions (mm²):
+----------------------------------------------------------------------
+Group Age_Group Combined_Mean Male_Contribution Female_Contribution Male_Prop_of_Mean Female_Prop_of_Mean Male_Sample_Prop Female_Sample_Prop  Total_N
+   HC     18-29         22.57              8.69               13.89             38.5%               61.5%            34.9%              65.1%      315
+   HC     30-39         21.68              7.80               13.88             36.0%               64.0%            29.0%              71.0%      379
+   HC     40-49         25.91             10.31               15.61             39.8%               60.2%            34.8%              65.2%      221
+   HC     50-59         28.58              8.89               19.69             31.1%               68.9%            33.3%              66.7%       72
+   HC       60+         29.64              9.64               20.00             32.5%               67.5%            45.5%              54.5%       11
+   MS     18-29        673.22            231.47              441.76             34.4%               65.6%            32.2%              67.8%       90
+   MS     30-39       1324.93            413.86              911.07             31.2%               68.8%            26.8%              73.2%      138
+   MS     40-49       1395.62            374.48             1021.15             26.8%               73.2%            28.2%              71.8%      103
+   MS     50-59       1496.53            340.18             1156.36             22.7%               77.3%            26.7%              73.3%       45
+   MS       60+       3192.00            625.00             2567.00             19.6%               80.4%            20.0%              80.0%        5
+Contribution analysis saved to: lesion_area_contributions.csv
+
+Lesion Ratio - Proportional Contributions (%):
+----------------------------------------------------------------------
+Group Age_Group Combined_Mean Male_Contribution Female_Contribution Male_Prop_of_Mean Female_Prop_of_Mean Male_Sample_Prop Female_Sample_Prop  Total_N
+   HC     18-29          0.01              0.00                0.01             35.9%               64.1%            34.9%              65.1%      315
+   HC     30-39          0.01              0.00                0.01             33.7%               66.3%            29.0%              71.0%      379
+   HC     40-49          0.01              0.00                0.01             37.9%               62.1%            34.8%              65.2%      221
+   HC     50-59          0.01              0.00                0.01             28.3%               71.7%            33.3%              66.7%       72
+   HC       60+          0.01              0.00                0.01             31.0%               69.0%            45.5%              54.5%       11
+   MS     18-29          0.31              0.10                0.21             32.3%               67.7%            32.2%              67.8%       90
+   MS     30-39          0.64              0.18                0.45             28.9%               71.1%            26.8%              73.2%      138
+   MS     40-49          0.69              0.17                0.51             25.3%               74.7%            28.2%              71.8%      103
+   MS     50-59          0.75              0.16                0.59             21.1%               78.9%            26.7%              73.3%       45
+   MS       60+          1.63              0.31                1.31             19.3%               80.7%            20.0%              80.0%        5
+Contribution analysis saved to: lesion_ratio_contributions.csv
+
+================================================================================
+TABLE 6: STACKED AREA VALUES (FOR AREA CHART)
+================================================================================
+
+WMH Area - Stacked Values (mm²):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29          0.00 to 24.87               24.87 to 46.21        46.21             24.87               21.34
+   HC     30-39          0.00 to 26.88               26.88 to 46.44        46.44             26.88               19.56
+   HC     40-49          0.00 to 29.58               29.58 to 53.54        53.54             29.58               23.95
+   HC     50-59          0.00 to 26.67               26.67 to 56.21        56.21             26.67               29.54
+   HC       60+          0.00 to 21.20               21.20 to 57.87        57.87             21.20               36.67
+   MS     18-29         0.00 to 718.34            718.34 to 1370.12      1370.12            718.34              651.77
+   MS     30-39        0.00 to 1543.57           1543.57 to 2788.40      2788.40           1543.57             1244.83
+   MS     40-49        0.00 to 1330.03           1330.03 to 2751.36      2751.36           1330.03             1421.32
+   MS     50-59        0.00 to 1275.67           1275.67 to 2852.52      2852.52           1275.67             1576.85
+   MS       60+        0.00 to 3125.00           3125.00 to 6333.75      6333.75           3125.00             3208.75
+Stacked data saved to: lesion_area_stacked_data.csv
+
+WMH Ratio - Stacked Values (%):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29           0.00 to 0.01                 0.01 to 0.02         0.02              0.01                0.01
+   HC     30-39           0.00 to 0.01                 0.01 to 0.02         0.02              0.01                0.01
+   HC     40-49           0.00 to 0.01                 0.01 to 0.02         0.02              0.01                0.01
+   HC     50-59           0.00 to 0.01                 0.01 to 0.03         0.03              0.01                0.01
+   HC       60+           0.00 to 0.01                 0.01 to 0.03         0.03              0.01                0.02
+   MS     18-29           0.00 to 0.32                 0.32 to 0.63         0.63              0.32                0.31
+   MS     30-39           0.00 to 0.69                 0.69 to 1.31         1.31              0.69                0.62
+   MS     40-49           0.00 to 0.62                 0.62 to 1.33         1.33              0.62                0.71
+   MS     50-59           0.00 to 0.59                 0.59 to 1.40         1.40              0.59                0.81
+   MS       60+           0.00 to 1.57                 1.57 to 3.21         3.21              1.57                1.64
+Stacked data saved to: lesion_ratio_stacked_data.csv
+
+WMH Ratio-Skull - Stacked Values (%):
+----------------------------------------------------------------------
+Group Age Group Male Layer (0 to Male) Female Layer (Male to Total) Total Height Male Contribution Female Contribution
+   HC     18-29           0.00 to 0.01                 0.01 to 0.01         0.01              0.01                0.01
+   HC     30-39           0.00 to 0.01                 0.01 to 0.01         0.01              0.01                0.00
+   HC     40-49           0.00 to 0.01                 0.01 to 0.01         0.01              0.01                0.01
+   HC     50-59           0.00 to 0.01                 0.01 to 0.01         0.01              0.01                0.01
+   HC       60+           0.00 to 0.00                 0.00 to 0.01         0.01              0.00                0.01
+   MS     18-29           0.00 to 0.16                 0.16 to 0.33         0.33              0.16                0.16
+   MS     30-39           0.00 to 0.36                 0.36 to 0.68         0.68              0.36                0.32
+   MS     40-49           0.00 to 0.30                 0.30 to 0.66         0.66              0.30                0.36
+   MS     50-59           0.00 to 0.30                 0.30 to 0.69         0.69              0.30                0.40
+   MS       60+           0.00 to 0.75                 0.75 to 1.55         1.55              0.75                0.80
+Stacked data saved to: lesion_ratio_skull_stacked_data.csv
+
+================================================================================
+All lesion burden tables have been generated and saved to CSV files!
+================================================================================
+
+Generated Files Summary:
+- lesion_area_detailed_stats.csv (Complete descriptive statistics)
+- lesion_ratio_detailed_stats.csv (Complete descriptive statistics)
+- lesion_area_plot_data.csv (Data used for visualization)
+- lesion_ratio_plot_data.csv (Data used for visualization)
+- lesion_area_stacked_data.csv (Stacked area chart values)
+- lesion_ratio_stacked_data.csv (Stacked area chart values)
+- lesion_area_robust_stats.csv (Non-parametric robust measures)
+- lesion_ratio_robust_stats.csv (Non-parametric robust measures)
+- lesion_burden_analysis_documentation.txt (Comprehensive documentation)
+ENHANCED STATISTICAL TABLES GENERATED!
+- total_lesion_burden_analysis.png (Figure)
+• Enhanced descriptive statistics with IQR
+• Comprehensive statistical comparison results
+• Detailed plot data with contributions
+• Proportional contribution analysis
+• Effect size interpretations
+• All tables saved as CSV files for further analysis
+
+==================================================
+STATISTICAL COMPARISONS (HC vs MS)
+==================================================
+
+WMH Area comparison:
+HC: N=1000, mean ± SD = 23.49 ± 26.36 mm²
+MS: N=381, mean ± SD = 1234.86 ± 1490.84 mm²
+Normality tests: HC p=0.000, MS p=0.000
+Mann-Whitney U test: U-statistic = 12005.000, p-value = 4.990405707522218e-160
+Effect size (r) = 0.310
+HC: median [IQR] = 16.00 [5.00-33.00] mm²
+MS: median [IQR] = 621.00 [260.00-1778.00] mm²
+
+WMH Ratio comparison:
+HC: N=1000, mean ± SD = 0.01 ± 0.01%
+MS: N=381, mean ± SD = 0.60 ± 0.74%
+Normality tests: HC p=0.000, MS p=0.000
+Mann-Whitney U test: U-statistic = 11963.000, p-value = 4.443121140688023e-160
+Effect size (r) = 0.310
+HC: median [IQR] = 0.01 [0.00-0.02]%
+MS: median [IQR] = 0.28 [0.12-0.84]%
+
+============================================================
+MS SUBGROUP LESION ANALYSIS
+============================================================
+
+================================================================================
+COMPREHENSIVE MS SUBGROUP DOCUMENTATION GENERATED
+================================================================================
+Documentation saved to: ms_subgroup_analysis_documentation.txt
+File contains detailed explanation of MS lesion subtype analysis and clinical interpretation.
+
+================================================================================
+TABLE 1: DETAILED STATISTICS BY SUBGROUP, AGE, AND LESION SUBTYPE
+================================================================================
+
+WMH Subtype Area (mm²):
+--------------------------------------------------------------------------------
+          Subgroup Age Group Lesion Type   N    Mean      SD  Median     Q25     Q75     Min     Max
+   All MS Patients     18-29       PEWMH  90  381.83  942.49  174.00   57.50  416.00    0.00 8633.00
+   All MS Patients     18-29        DWMH  90  263.81  303.03  149.50   42.50  362.75    0.00 1419.00
+   All MS Patients     18-29       JCWMH  90   27.58   29.10   19.50    6.00   37.75    0.00  143.00
+   All MS Patients     30-39       PEWMH 138  782.96 1098.02  317.50   83.50  946.50    0.00 5898.00
+   All MS Patients     30-39        DWMH 138  501.08  556.35  316.00   97.25  714.50    0.00 2667.00
+   All MS Patients     30-39       JCWMH 138   40.88   41.47   28.50   12.25   55.25    0.00  207.00
+   All MS Patients     40-49       PEWMH 103  876.49 1209.98  397.00  161.00 1123.00    5.00 7536.00
+   All MS Patients     40-49        DWMH 103  478.46  440.93  374.00  107.00  779.50    0.00 1756.00
+   All MS Patients     40-49       JCWMH 103   40.68   38.15   31.00   13.50   56.00    0.00  207.00
+   All MS Patients     50-59       PEWMH  45 1048.22 1135.23  996.00  181.00 1487.00   31.00 5703.00
+   All MS Patients     50-59        DWMH  45  404.87  345.20  343.00  103.00  647.00    0.00 1404.00
+   All MS Patients     50-59       JCWMH  45   43.44   34.85   38.00   18.00   64.00    0.00  171.00
+   All MS Patients       60+       PEWMH   5 2184.00 1676.93 1891.00 1155.00 3468.00  147.00 4259.00
+   All MS Patients       60+        DWMH   5  943.60  629.29  924.00  675.00 1204.00  108.00 1807.00
+   All MS Patients       60+       JCWMH   5   64.40   64.39   30.00   21.00  116.00    5.00  150.00
+Female MS Patients     18-29       PEWMH  61  401.00 1124.31  155.00   46.00  350.00    0.00 8633.00
+Female MS Patients     18-29        DWMH  61  223.79  294.80  132.00   32.00  249.00    0.00 1419.00
+Female MS Patients     18-29       JCWMH  61   26.98   30.62   18.00    6.00   34.00    0.00  143.00
+Female MS Patients     30-39       PEWMH 101  712.95 1008.77  260.00   76.00  891.00    0.00 4589.00
+Female MS Patients     30-39        DWMH 101  491.92  571.24  282.00   88.00  713.00    0.00 2667.00
+Female MS Patients     30-39       JCWMH 101   39.96   42.66   28.00   11.00   52.00    0.00  207.00
+Female MS Patients     40-49       PEWMH  74  892.72 1292.20  369.50  174.00 1138.75    5.00 7536.00
+Female MS Patients     40-49        DWMH  74  486.24  446.53  372.00  110.25  745.25    0.00 1756.00
+Female MS Patients     40-49       JCWMH  74   42.36   37.56   32.00   17.00   59.50    0.00  207.00
+Female MS Patients     50-59       PEWMH  33 1105.12 1236.11  996.00  181.00 1496.00   31.00 5703.00
+Female MS Patients     50-59        DWMH  33  421.55  361.35  407.00  103.00  656.00    0.00 1404.00
+Female MS Patients     50-59       JCWMH  33   50.18   37.26   50.00   21.00   66.00    0.00  171.00
+Female MS Patients       60+       PEWMH   4 2257.25 1927.09 2311.50  903.00 3665.75  147.00 4259.00
+Female MS Patients       60+        DWMH   4  878.50  706.93  799.50  533.25 1144.75  108.00 1807.00
+Female MS Patients       60+       JCWMH   4   73.00   70.96   68.50   17.00  124.50    5.00  150.00
+  Male MS Patients     18-29       PEWMH  29  341.52  335.08  208.00  119.00  479.00    1.00 1206.00
+  Male MS Patients     18-29        DWMH  29  348.00  307.94  278.00  102.00  492.00    0.00 1070.00
+  Male MS Patients     18-29       JCWMH  29   28.83   26.08   26.00    7.00   43.00    0.00   94.00
+  Male MS Patients     30-39       PEWMH  37  974.08 1307.73  392.00  198.00 1278.00    0.00 5898.00
+  Male MS Patients     30-39        DWMH  37  526.08  520.20  344.00  127.00  715.00    0.00 1818.00
+  Male MS Patients     30-39       JCWMH  37   43.41   38.48   35.00   21.00   60.00    0.00  164.00
+  Male MS Patients     40-49       PEWMH  29  835.07  988.69  416.00  139.00 1009.00   18.00 3916.00
+  Male MS Patients     40-49        DWMH  29  458.59  433.42  376.00   97.00  797.00    2.00 1603.00
+  Male MS Patients     40-49       JCWMH  29   36.38   39.96   26.00    4.00   50.00    0.00  166.00
+  Male MS Patients     50-59       PEWMH  12  891.75  820.72  757.50  171.25 1424.75   59.00 2436.00
+  Male MS Patients     50-59        DWMH  12  359.00  306.07  270.00  107.75  631.25    9.00  923.00
+  Male MS Patients     50-59       JCWMH  12   24.92   17.61   20.50   15.00   30.00    6.00   68.00
+  Male MS Patients       60+       PEWMH   1 1891.00     N/A 1891.00 1891.00 1891.00 1891.00 1891.00
+  Male MS Patients       60+        DWMH   1 1204.00     N/A 1204.00 1204.00 1204.00 1204.00 1204.00
+  Male MS Patients       60+       JCWMH   1   30.00     N/A   30.00   30.00   30.00   30.00   30.00
+Table saved to: ms_subgroup_area_detailed_stats.csv
+
+WMH Subtype Ratio (%):
+--------------------------------------------------------------------------------
+          Subgroup Age Group Lesion Type   N  Mean    SD Median   Q25   Q75   Min    Max
+   All MS Patients     18-29       PEWMH  90 49.15 23.58  50.61 33.35 64.61  0.00 100.00
+   All MS Patients     18-29        DWMH  90 41.67 23.14  43.37 26.11 56.56  0.00 100.00
+   All MS Patients     18-29       JCWMH  90  8.07 12.18   3.99  1.99  9.02  0.00  81.82
+   All MS Patients     30-39       PEWMH 138 51.24 19.11  51.52 41.08 62.42  0.00 100.00
+   All MS Patients     30-39        DWMH 138 41.45 17.51  42.82 30.46 53.17  0.00  80.00
+   All MS Patients     30-39       JCWMH 138  7.31 10.66   4.01  1.58  7.58  0.00  68.00
+   All MS Patients     40-49       PEWMH 103 56.97 19.99  58.44 44.25 70.34 11.86 100.00
+   All MS Patients     40-49        DWMH 103 37.69 18.62  36.88 26.69 50.48  0.00  85.59
+   All MS Patients     40-49       JCWMH 103  5.34  5.79   3.42  1.35  6.93  0.00  28.02
+   All MS Patients     50-59       PEWMH  45 63.49 16.67  64.32 56.89 74.76 17.10  96.22
+   All MS Patients     50-59        DWMH  45 30.78 13.58  31.23 22.95 37.86  0.00  70.21
+   All MS Patients     50-59       JCWMH  45  5.73  7.31   3.09  1.81  6.10  0.00  33.68
+   All MS Patients       60+       PEWMH   5 64.18  9.75  62.94 60.51 64.33 53.26  79.86
+   All MS Patients       60+        DWMH   5 33.06  9.06  36.78 33.52 38.53 17.33  39.13
+   All MS Patients       60+       JCWMH   5  2.76  2.89   2.15  0.96  2.81  0.27   7.61
+Female MS Patients     18-29       PEWMH  61 50.41 25.35  52.54 33.41 67.41  0.00 100.00
+Female MS Patients     18-29        DWMH  61 38.68 24.88  35.66 23.33 53.42  0.00 100.00
+Female MS Patients     18-29       JCWMH  61  9.28 14.16   3.65  1.95 10.05  0.00  81.82
+Female MS Patients     30-39       PEWMH 101 50.53 18.67  51.06 40.45 61.29  0.00  88.57
+Female MS Patients     30-39        DWMH 101 42.11 17.90  43.43 31.33 54.06  0.00  80.00
+Female MS Patients     30-39       JCWMH 101  7.36 10.89   4.19  1.56  6.97  0.00  68.00
+Female MS Patients     40-49       PEWMH  74 55.48 20.60  57.14 41.62 68.83 11.86 100.00
+Female MS Patients     40-49        DWMH  74 38.76 19.32  38.78 28.43 51.37  0.00  85.59
+Female MS Patients     40-49       JCWMH  74  5.76  5.95   4.00  1.59  7.24  0.00  28.02
+Female MS Patients     50-59       PEWMH  33 62.95 17.91  64.31 56.69 75.67 17.10  96.22
+Female MS Patients     50-59        DWMH  33 30.65 14.20  31.23 21.45 37.66  0.00  70.21
+Female MS Patients     50-59       JCWMH  33  6.40  8.25   3.51  1.87  6.93  0.00  33.68
+Female MS Patients       60+       PEWMH   4 65.10 11.00  63.64 60.52 68.21 53.26  79.86
+Female MS Patients       60+        DWMH   4 31.69  9.85  35.15 29.47 37.37 17.33  39.13
+Female MS Patients       60+       JCWMH   4  3.21  3.12   2.48  1.68  4.01  0.27   7.61
+  Male MS Patients     18-29       PEWMH  29 46.51 19.49  47.59 32.29 54.31 11.76 100.00
+  Male MS Patients     18-29        DWMH  29 47.96 17.73  49.32 38.90 58.82  0.00  74.94
+  Male MS Patients     18-29       JCWMH  29  5.53  5.62   4.27  2.13  6.99  0.00  29.41
+  Male MS Patients     30-39       PEWMH  37 53.15 20.43  53.64 42.27 64.66  0.00 100.00
+  Male MS Patients     30-39        DWMH  37 39.67 16.52  39.33 30.28 50.34  0.00  75.00
+  Male MS Patients     30-39       JCWMH  37  7.19 10.18   2.67  1.63 10.45  0.00  50.67
+  Male MS Patients     40-49       PEWMH  29 60.76 18.13  63.64 50.09 72.59 20.33  95.56
+  Male MS Patients     40-49        DWMH  29 34.98 16.72  31.17 25.01 46.39  2.22  72.11
+  Male MS Patients     40-49       JCWMH  29  4.26  5.31   2.80  0.89  4.47  0.00  19.08
+  Male MS Patients     50-59       PEWMH  12 64.97 13.21  65.98 57.66 73.73 42.75  86.81
+  Male MS Patients     50-59        DWMH  12 31.13 12.27  31.57 25.02 40.33 10.71  49.50
+  Male MS Patients     50-59       JCWMH  12  3.90  3.32   2.79  1.60  4.98  0.55  11.59
+  Male MS Patients       60+       PEWMH   1 60.51   N/A  60.51 60.51 60.51 60.51  60.51
+  Male MS Patients       60+        DWMH   1 38.53   N/A  38.53 38.53 38.53 38.53  38.53
+  Male MS Patients       60+       JCWMH   1  0.96   N/A   0.96  0.96  0.96  0.96   0.96
+Table saved to: ms_subgroup_ratio_detailed_stats.csv
+
+================================================================================
+TABLE 2: PLOT DATA (MEANS BY AGE GROUP AND LESION SUBTYPE)
+================================================================================
+
+WMH Subtype Area - Mean Values Used in Plot (mm²):
+------------------------------------------------------------------------------------------
+          Subgroup Age Group Age Center PEWMH Mean DWMH Mean JCWMH Mean  PEWMH N  DWMH N  JCWMH N Total Mean
+   All MS Patients     18-29       23.5     381.83    263.81      27.58       90      90       90     673.22
+   All MS Patients     30-39       34.5     782.96    501.08      40.88      138     138      138    1324.93
+   All MS Patients     40-49       44.5     876.49    478.46      40.68      103     103      103    1395.62
+   All MS Patients     50-59       54.5    1048.22    404.87      43.44       45      45       45    1496.53
+   All MS Patients       60+       64.5    2184.00    943.60      64.40        5       5        5    3192.00
+Female MS Patients     18-29       23.5     401.00    223.79      26.98       61      61       61     651.77
+Female MS Patients     30-39       34.5     712.95    491.92      39.96      101     101      101    1244.83
+Female MS Patients     40-49       44.5     892.72    486.24      42.36       74      74       74    1421.32
+Female MS Patients     50-59       54.5    1105.12    421.55      50.18       33      33       33    1576.85
+Female MS Patients       60+       64.5    2257.25    878.50      73.00        4       4        4    3208.75
+  Male MS Patients     18-29       23.5     341.52    348.00      28.83       29      29       29     718.34
+  Male MS Patients     30-39       34.5     974.08    526.08      43.41       37      37       37    1543.57
+  Male MS Patients     40-49       44.5     835.07    458.59      36.38       29      29       29    1330.03
+  Male MS Patients     50-59       54.5     891.75    359.00      24.92       12      12       12    1275.67
+  Male MS Patients       60+       64.5    1891.00   1204.00      30.00        1       1        1    3125.00
+Plot data saved to: ms_subgroup_area_plot_data.csv
+
+WMH Subtype Ratio - Mean Values Used in Plot (%):
+------------------------------------------------------------------------------------------
+          Subgroup Age Group Age Center PEWMH Mean DWMH Mean JCWMH Mean  PEWMH N  DWMH N  JCWMH N Total Mean
+   All MS Patients     18-29       23.5      49.15     41.67       8.07       90      90       90      98.89
+   All MS Patients     30-39       34.5      51.24     41.45       7.31      138     138      138     100.00
+   All MS Patients     40-49       44.5      56.97     37.69       5.34      103     103      103     100.00
+   All MS Patients     50-59       54.5      63.49     30.78       5.73       45      45       45     100.00
+   All MS Patients       60+       64.5      64.18     33.06       2.76        5       5        5     100.00
+Female MS Patients     18-29       23.5      50.41     38.68       9.28       61      61       61      98.36
+Female MS Patients     30-39       34.5      50.53     42.11       7.36      101     101      101     100.00
+Female MS Patients     40-49       44.5      55.48     38.76       5.76       74      74       74     100.00
+Female MS Patients     50-59       54.5      62.95     30.65       6.40       33      33       33     100.00
+Female MS Patients       60+       64.5      65.10     31.69       3.21        4       4        4     100.00
+  Male MS Patients     18-29       23.5      46.51     47.96       5.53       29      29       29     100.00
+  Male MS Patients     30-39       34.5      53.15     39.67       7.19       37      37       37     100.00
+  Male MS Patients     40-49       44.5      60.76     34.98       4.26       29      29       29     100.00
+  Male MS Patients     50-59       54.5      64.97     31.13       3.90       12      12       12     100.00
+  Male MS Patients       60+       64.5      60.51     38.53       0.96        1       1        1     100.00
+Plot data saved to: ms_subgroup_ratio_plot_data.csv
+
+================================================================================
+TABLE 3: THREE-LAYER STACKED AREA VALUES
+================================================================================
+
+WMH Subtype Area - Stacked Layer Values (mm²):
+----------------------------------------------------------------------------------------------------
+          Subgroup Age Group     PEWMH Layer         DWMH Layer        JCWMH Layer Total Height PEWMH Contribution DWMH Contribution JCWMH Contribution PEWMH % DWMH % JCWMH %
+   All MS Patients     18-29  0.00 to 381.83   381.83 to 645.64   645.64 to 673.22       673.22             381.83            263.81              27.58   56.7%  39.2%    4.1%
+   All MS Patients     30-39  0.00 to 782.96  782.96 to 1284.04 1284.04 to 1324.93      1324.93             782.96            501.08              40.88   59.1%  37.8%    3.1%
+   All MS Patients     40-49  0.00 to 876.49  876.49 to 1354.94 1354.94 to 1395.62      1395.62             876.49            478.46              40.68   62.8%  34.3%    2.9%
+   All MS Patients     50-59 0.00 to 1048.22 1048.22 to 1453.09 1453.09 to 1496.53      1496.53            1048.22            404.87              43.44   70.0%  27.1%    2.9%
+   All MS Patients       60+ 0.00 to 2184.00 2184.00 to 3127.60 3127.60 to 3192.00      3192.00            2184.00            943.60              64.40   68.4%  29.6%    2.0%
+Female MS Patients     18-29  0.00 to 401.00   401.00 to 624.79   624.79 to 651.77       651.77             401.00            223.79              26.98   61.5%  34.3%    4.1%
+Female MS Patients     30-39  0.00 to 712.95  712.95 to 1204.87 1204.87 to 1244.83      1244.83             712.95            491.92              39.96   57.3%  39.5%    3.2%
+Female MS Patients     40-49  0.00 to 892.72  892.72 to 1378.96 1378.96 to 1421.32      1421.32             892.72            486.24              42.36   62.8%  34.2%    3.0%
+Female MS Patients     50-59 0.00 to 1105.12 1105.12 to 1526.67 1526.67 to 1576.85      1576.85            1105.12            421.55              50.18   70.1%  26.7%    3.2%
+Female MS Patients       60+ 0.00 to 2257.25 2257.25 to 3135.75 3135.75 to 3208.75      3208.75            2257.25            878.50              73.00   70.3%  27.4%    2.3%
+  Male MS Patients     18-29  0.00 to 341.52   341.52 to 689.52   689.52 to 718.34       718.34             341.52            348.00              28.83   47.5%  48.4%    4.0%
+  Male MS Patients     30-39  0.00 to 974.08  974.08 to 1500.16 1500.16 to 1543.57      1543.57             974.08            526.08              43.41   63.1%  34.1%    2.8%
+  Male MS Patients     40-49  0.00 to 835.07  835.07 to 1293.66 1293.66 to 1330.03      1330.03             835.07            458.59              36.38   62.8%  34.5%    2.7%
+  Male MS Patients     50-59  0.00 to 891.75  891.75 to 1250.75 1250.75 to 1275.67      1275.67             891.75            359.00              24.92   69.9%  28.1%    2.0%
+  Male MS Patients       60+ 0.00 to 1891.00 1891.00 to 3095.00 3095.00 to 3125.00      3125.00            1891.00           1204.00              30.00   60.5%  38.5%    1.0%
+Stacked data saved to: ms_subgroup_area_stacked_data.csv
+
+WMH Subtype Ratio - Stacked Layer Values (%):
+----------------------------------------------------------------------------------------------------
+          Subgroup Age Group   PEWMH Layer     DWMH Layer     JCWMH Layer Total Height PEWMH Contribution DWMH Contribution JCWMH Contribution PEWMH % DWMH % JCWMH %
+   All MS Patients     18-29 0.00 to 49.15 49.15 to 90.82  90.82 to 98.89        98.89              49.15             41.67               8.07   49.7%  42.1%    8.2%
+   All MS Patients     30-39 0.00 to 51.24 51.24 to 92.69 92.69 to 100.00       100.00              51.24             41.45               7.31   51.2%  41.5%    7.3%
+   All MS Patients     40-49 0.00 to 56.97 56.97 to 94.66 94.66 to 100.00       100.00              56.97             37.69               5.34   57.0%  37.7%    5.3%
+   All MS Patients     50-59 0.00 to 63.49 63.49 to 94.27 94.27 to 100.00       100.00              63.49             30.78               5.73   63.5%  30.8%    5.7%
+   All MS Patients       60+ 0.00 to 64.18 64.18 to 97.24 97.24 to 100.00       100.00              64.18             33.06               2.76   64.2%  33.1%    2.8%
+Female MS Patients     18-29 0.00 to 50.41 50.41 to 89.08  89.08 to 98.36        98.36              50.41             38.68               9.28   51.2%  39.3%    9.4%
+Female MS Patients     30-39 0.00 to 50.53 50.53 to 92.64 92.64 to 100.00       100.00              50.53             42.11               7.36   50.5%  42.1%    7.4%
+Female MS Patients     40-49 0.00 to 55.48 55.48 to 94.24 94.24 to 100.00       100.00              55.48             38.76               5.76   55.5%  38.8%    5.8%
+Female MS Patients     50-59 0.00 to 62.95 62.95 to 93.60 93.60 to 100.00       100.00              62.95             30.65               6.40   62.9%  30.6%    6.4%
+Female MS Patients       60+ 0.00 to 65.10 65.10 to 96.79 96.79 to 100.00       100.00              65.10             31.69               3.21   65.1%  31.7%    3.2%
+  Male MS Patients     18-29 0.00 to 46.51 46.51 to 94.47 94.47 to 100.00       100.00              46.51             47.96               5.53   46.5%  48.0%    5.5%
+  Male MS Patients     30-39 0.00 to 53.15 53.15 to 92.81 92.81 to 100.00       100.00              53.15             39.67               7.19   53.1%  39.7%    7.2%
+  Male MS Patients     40-49 0.00 to 60.76 60.76 to 95.74 95.74 to 100.00       100.00              60.76             34.98               4.26   60.8%  35.0%    4.3%
+  Male MS Patients     50-59 0.00 to 64.97 64.97 to 96.10 96.10 to 100.00       100.00              64.97             31.13               3.90   65.0%  31.1%    3.9%
+  Male MS Patients       60+ 0.00 to 60.51 60.51 to 99.04 99.04 to 100.00       100.00              60.51             38.53               0.96   60.5%  38.5%    1.0%
+Stacked data saved to: ms_subgroup_ratio_stacked_data.csv
+
+================================================================================
+TABLE 4: GENDER COMPARISON RESULTS
+================================================================================
+No gender comparison data available.
+
+================================================================================
+TABLE 5: SUMMARY STATISTICS BY SUBGROUP AND METRIC
+================================================================================
+
+WMH Subtype Area - Summary Across All Age Groups (mm²):
+------------------------------------------------------------------------------------------
+          Subgroup Lesion Type  Total N  Age Groups Mean of Means Median of Medians   Range of Means Range of Medians
+   All MS Patients       PEWMH      381           5       1054.70            397.00 381.83 - 2184.00 174.00 - 1891.00
+   All MS Patients        DWMH      381           5        518.36            343.00  263.81 - 943.60  149.50 - 924.00
+   All MS Patients       JCWMH      381           5         43.40             30.00    27.58 - 64.40    19.50 - 38.00
+Female MS Patients       PEWMH      273           5       1073.81            369.50 401.00 - 2257.25 155.00 - 2311.50
+Female MS Patients        DWMH      273           5        500.40            372.00  223.79 - 878.50  132.00 - 799.50
+Female MS Patients       JCWMH      273           5         46.50             32.00    26.98 - 73.00    18.00 - 68.50
+  Male MS Patients       PEWMH      108           5        986.68            416.00 341.52 - 1891.00 208.00 - 1891.00
+  Male MS Patients        DWMH      108           5        579.13            344.00 348.00 - 1204.00 270.00 - 1204.00
+  Male MS Patients       JCWMH      108           5         32.71             26.00    24.92 - 43.41    20.50 - 35.00
+Summary statistics saved to: ms_subgroup_area_summary_stats.csv
+
+WMH Subtype Ratio - Summary Across All Age Groups (%):
+------------------------------------------------------------------------------------------
+          Subgroup Lesion Type  Total N  Age Groups Mean of Means Median of Medians Range of Means Range of Medians
+   All MS Patients       PEWMH      381           5         57.00             58.44  49.15 - 64.18    50.61 - 64.32
+   All MS Patients        DWMH      381           5         36.93             36.88  30.78 - 41.67    31.23 - 43.37
+   All MS Patients       JCWMH      381           5          5.84              3.42    2.76 - 8.07      2.15 - 4.01
+Female MS Patients       PEWMH      273           5         56.89             57.14  50.41 - 65.10    51.06 - 64.31
+Female MS Patients        DWMH      273           5         36.38             35.66  30.65 - 42.11    31.23 - 43.43
+Female MS Patients       JCWMH      273           5          6.40              3.65    3.21 - 9.28      2.48 - 4.19
+  Male MS Patients       PEWMH      108           5         57.18             60.51  46.51 - 64.97    47.59 - 65.98
+  Male MS Patients        DWMH      108           5         38.45             38.53  31.13 - 47.96    31.17 - 49.32
+  Male MS Patients       JCWMH      108           5          4.37              2.79    0.96 - 7.19      0.96 - 4.27
+Summary statistics saved to: ms_subgroup_ratio_summary_stats.csv
+
+================================================================================
+All MS subgroup tables have been generated and saved to CSV files!
+================================================================================
+
+Generated Files Summary:
+- ms_subgroup_area_detailed_stats.csv (Complete descriptive statistics)
+- ms_subgroup_ratio_detailed_stats.csv (Complete descriptive statistics)
+- ms_subgroup_area_plot_data.csv (Data used for visualization)
+- ms_subgroup_ratio_plot_data.csv (Data used for visualization)
+- ms_subgroup_area_stacked_data.csv (Three-layer stacked values)
+- ms_subgroup_ratio_stacked_data.csv (Three-layer stacked values)
+- ms_subgroup_gender_comparisons.csv (Statistical gender comparisons)
+- ms_subgroup_area_summary_stats.csv (Summary across age groups)
+- ms_subgroup_ratio_summary_stats.csv (Summary across age groups)
+- ms_subgroup_analysis_documentation.txt (Comprehensive documentation)
+- ms_subgroup_analysis.png (Figure)
+
+==================================================
+MS LESION SUBTYPE STATISTICS
+==================================================
+
+MS Lesion Subtype Areas (mm²):
+PEWMH: median [IQR] = 299.00 [104.00-952.00] mm²
+DWMH: median [IQR] = 272.00 [94.00-659.00] mm²
+JCWMH: median [IQR] = 28.00 [11.00-53.00] mm²
+
+MS Lesion Subtype Ratios (%):
+PEWMH: median [IQR] = 54.630 [41.360-67.530]%
+DWMH: median [IQR] = 38.868 [27.907-51.005]%
+JCWMH: median [IQR] = 3.718 [1.573-7.556]%
+
+==================================================
+GENDER COMPARISON WITH STANDARDIZED STATISTICAL APPROACH
+==================================================
+
+Area Comparisons (mm²) - Standardized Statistical Testing:
+
+PEWMH - Mann-Whitney U test:
+  Male median [IQR]: 379.00 [135.75-1124.50] mm² (n=108)
+  Female median [IQR]: 271.00 [90.00-945.00] mm² (n=273)
+  Test statistic: 15769.500
+  P-value: 0.2891081612411167
+  Rank-biserial correlation (r): 0.054
+  Normality: Male p=0.000 (Non-normal), Female p=0.000 (Non-normal)
+
+DWMH - Mann-Whitney U test:
+  Male median [IQR]: 328.50 [107.25-693.50] mm² (n=108)
+  Female median [IQR]: 255.00 [84.00-638.00] mm² (n=273)
+  Test statistic: 15615.000
+  P-value: 0.36777841590648075
+  Rank-biserial correlation (r): 0.046
+  Normality: Male p=0.000 (Non-normal), Female p=0.000 (Non-normal)
+
+JCWMH - Mann-Whitney U test:
+  Male median [IQR]: 27.00 [9.00-48.50] mm² (n=108)
+  Female median [IQR]: 28.00 [12.00-56.00] mm² (n=273)
+  Test statistic: 14190.500
+  P-value: 0.5693088303271017
+  Rank-biserial correlation (r): 0.029
+  Normality: Male p=0.000 (Non-normal), Female p=0.000 (Non-normal)
+
+Ratio Comparisons (%) - Standardized Statistical Testing:
+
+PEWMH - Independent t-test:
+  Male mean ± SD: 54.791 ± 19.618% (n=108)
+  Female mean ± SD: 53.561 ± 21.028% (n=273)
+  Test statistic: 0.524
+  P-value: 0.6003249367442904
+  Cohen's d: 0.060
+  Normality: Male p=0.512 (Normal), Female p=0.160 (Normal)
+
+DWMH - Mann-Whitney U test:
+  Male median [IQR]: 39.345 [28.427-51.410]% (n=108)
+  Female median [IQR]: 38.164 [27.083-50.909]% (n=273)
+  Test statistic: 15273.000
+  P-value: 0.5839606028807742
+  Rank-biserial correlation (r): 0.028
+  Normality: Male p=0.396 (Normal), Female p=0.020 (Non-normal)
+
+JCWMH - Mann-Whitney U test:
+  Male median [IQR]: 3.186 [1.494-6.388]% (n=108)
+  Female median [IQR]: 3.986 [1.651-7.671]% (n=273)
+  Test statistic: 13515.500
+  P-value: 0.20547349825590644
+  Rank-biserial correlation (r): 0.065
+  Normality: Male p=0.000 (Non-normal), Female p=0.000 (Non-normal)
+
+================================================================================
+CORRELATION ANALYSIS - STANDARDIZED STATISTICAL APPROACH
+================================================================================
+Data cleaning: 1000 -> 1000 samples after removing NaN/inf
+\nCalculating standardized correlations for HC group (n=1000)...
+Data cleaning: 381 -> 381 samples after removing NaN/inf
+\nCalculating standardized correlations for MS group (n=381)...
+\nCreating group comparison analysis...
+\nStandardized correlation matrices saved to: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4\standardized_correlation_matrices.xlsx
+\n================================================================================
+AGE CORRELATIONS - DETAILED STANDARDIZED STATISTICAL ANALYSIS
+================================================================================
+Data cleaning: 1000 -> 1000 samples after removing NaN/inf
+\nHC GROUP ANALYSIS (n=1000):
+==================================================
+
+Age vs Ventricular Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.199
+  P-value: p = 2.1763978568709673e-10
+  Effect Size (strength): Very Weak
+  Sample Size: n = 1000
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): Yes
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 0.453, Kurtosis = 0.053
+    Ventricular Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 1.094, Kurtosis = 2.268
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.079
+  P-value: p = 0.012889960561134787
+  Effect Size (strength): Very Weak
+  Sample Size: n = 1000
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): No
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 0.453, Kurtosis = 0.053
+    WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 2.517, Kurtosis = 10.932
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Periventricular WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.031
+  P-value: p = 0.3295720789882657
+  Effect Size (strength): Very Weak
+  Sample Size: n = 1000
+  Significant (uncorrected α = 0.05): No
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): No
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 0.453, Kurtosis = 0.053
+    Periventricular WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = -0.093, Kurtosis = -1.535
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Deep WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.010
+  P-value: p = 0.7493558295261181
+  Effect Size (strength): Very Weak
+  Sample Size: n = 1000
+  Significant (uncorrected α = 0.05): No
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): No
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 0.453, Kurtosis = 0.053
+    Deep WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 1.545, Kurtosis = 1.284
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Juxtacortical WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = -0.002
+  P-value: p = 0.9519765682615259
+  Effect Size (strength): Very Weak
+  Sample Size: n = 1000
+  Significant (uncorrected α = 0.05): No
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): No
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 0.453, Kurtosis = 0.053
+    Juxtacortical WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 1.548, Kurtosis = 1.150
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+Data cleaning: 381 -> 381 samples after removing NaN/inf
+\nMS GROUP ANALYSIS (n=381):
+==================================================
+
+Age vs Ventricular Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.403
+  P-value: p = 2.4969055626555926e-16
+  Effect Size (strength): Weak
+  Sample Size: n = 381
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): Yes
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.003 (Non-normal)
+         Skewness = 0.223, Kurtosis = -0.413
+    Ventricular Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 1.627, Kurtosis = 3.837
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.266
+  P-value: p = 1.3349442087467434e-07
+  Effect Size (strength): Very Weak
+  Sample Size: n = 381
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): Yes
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.003 (Non-normal)
+         Skewness = 0.223, Kurtosis = -0.413
+    WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 2.194, Kurtosis = 5.561
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Periventricular WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = 0.243
+  P-value: p = 1.651861487152491e-06
+  Effect Size (strength): Very Weak
+  Sample Size: n = 381
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): Yes
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.003 (Non-normal)
+         Skewness = 0.223, Kurtosis = -0.413
+    Periventricular WMH Ratio: Shapiro-Wilk p = 0.031 (Non-normal)
+         Skewness = -0.226, Kurtosis = -0.072
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Deep WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = -0.193
+  P-value: p = 0.00015045228142120898
+  Effect Size (strength): Very Weak
+  Sample Size: n = 381
+  Significant (uncorrected α = 0.05): Yes
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): Yes
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.003 (Non-normal)
+         Skewness = 0.223, Kurtosis = -0.413
+    Deep WMH Ratio: Shapiro-Wilk p = 0.012 (Non-normal)
+         Skewness = 0.105, Kurtosis = -0.027
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+
+Age vs Juxtacortical WMH Ratio:
+  Statistical Method: Spearman rank correlation
+  Correlation Coefficient: r = -0.046
+  P-value: p = 0.36669794853805016
+  Effect Size (strength): Very Weak
+  Sample Size: n = 381
+  Significant (uncorrected α = 0.05): No
+  Bonferroni correction: α = 0.05 / 5 comparisons = 0.0100
+  Significant (Bonferroni α = 0.0100): No
+  \n  Normality Assessment:
+    Age: Shapiro-Wilk p = 0.003 (Non-normal)
+         Skewness = 0.223, Kurtosis = -0.413
+    Juxtacortical WMH Ratio: Shapiro-Wilk p = 0.000 (Non-normal)
+         Skewness = 3.514, Kurtosis = 16.986
+  \n  Statistical Justification:
+    Spearman correlation used: Non-normal distribution detected
+\n================================================================================
+STANDARDIZED CORRELATION ANALYSIS COMPLETED
+================================================================================
+Key Features:
+✓ Automatic statistical method selection (Pearson vs Spearman)
+✓ Comprehensive normality testing with multiple criteria
+✓ Linearity assessment for parametric correlation validity
+✓ Detailed statistical justification for each analysis
+✓ Multiple testing correction considerations
+✓ Enhanced Excel output with method matrices and p-value matrices
+✓ Visual method identification in correlation heatmaps
+✓ All results saved to: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4\standardized_correlation_matrices.xlsx
+
+============================================================
+SUMMARY TABLE FOR PUBLICATION
+============================================================
+                            Variable  Healthy Controls       MS Patients
+0                       N (patients)              1000               381
+1             Age (years), mean ± SD       34.7 ± 10.1       37.3 ± 10.2
+2                Sex (Female), n (%)       673 (67.3%)       273 (71.7%)
+3   Ventricular Ratio (%), mean ± SD       1.16 ± 0.41       1.81 ± 0.85
+4  Total WMH Ratio (%), median [IQR]  0.01 [0.00-0.02]  0.28 [0.12-0.84]
+5         PEWMH Ratio (%), mean ± SD   50.464 ± 38.954   53.910 ± 20.620
+6          DWMH Ratio (%), mean ± SD   18.458 ± 29.075   39.117 ± 19.080
+7         JCWMH Ratio (%), mean ± SD   20.278 ± 30.949     6.711 ± 9.613
+
+Creating publication-quality visualizations...
+Creating Figure 1: Demographics and Overview...
+
+============================================================
+PUBLICATION FIGURE 1: DEMOGRAPHICS ANALYSIS
+============================================================
+
+================================================================================
+COMPREHENSIVE DEMOGRAPHICS DOCUMENTATION GENERATED
+================================================================================
+Documentation saved to: publication_figure_1_demographics_documentation.txt
+File contains detailed explanation of demographics figure and statistical considerations.
+
+================================================================================
+TABLE GENERATION: DEMOGRAPHICS ANALYSIS
+================================================================================
+
+============================================================
+TABLE 1: GENDER DISTRIBUTION BY GROUP
+============================================================
+           Group  Male Count  Female Count  Total Male % Female % Male:Female Ratio
+All Participants         435           946   1381  31.5%    68.5%            0.46:1
+              HC         327           673   1000  32.7%    67.3%            0.49:1
+              MS         108           273    381  28.3%    71.7%            0.40:1
+
+Gender distribution table saved to: demographics_gender_distribution.csv
+
+============================================================
+TABLE 2: AGE DISTRIBUTION STATISTICS BY GROUP AND GENDER
+============================================================
+    Group   N Mean   SD Median  Q25  Q75  IQR  Min  Max Range
+  HC_Male 327 34.8 10.8   35.0 26.0 41.5 15.5 18.0 72.0  54.0
+HC_Female 673 34.7  9.8   34.0 27.0 41.0 14.0 18.0 74.0  56.0
+  MS_Male 108 36.6 10.5   34.5 29.0 45.2 16.2 18.0 60.0  42.0
+MS_Female 273 37.7 10.1   37.0 30.0 44.0 14.0 18.0 68.0  50.0
+
+Age statistics table saved to: demographics_age_statistics.csv
+
+============================================================
+TABLE 3: AGE HISTOGRAM DATA BY BIN AND GROUP
+============================================================
+Bin_Center Age_Range  Bin_Start  Bin_End  HC Male_Count  HC Female_Count  MS Male_Count  MS Female_Count  Total_in_Bin
+      20.5     18-23       18.0     23.0             57               82              9               16           164
+      25.5     23-28       23.0     28.0             38               87              9               28           162
+      30.5     28-33       28.0     33.0             39              103             26               42           210
+      35.5     33-38       33.0     38.0             61              161             16               52           290
+      40.5     38-43       38.0     43.0             57              114             15               51           237
+      45.5     43-48       43.0     48.0             36               54             17               40           147
+      50.5     48-53       48.0     53.0             22               38              8               21            89
+      55.5     53-58       53.0     58.0              9               22              5               15            51
+      60.5     58-63       58.0     63.0              3                8              3                6            20
+      65.5     63-68       63.0     68.0              4                3              0                2             9
+
+Age histogram table saved to: demographics_age_histogram.csv
+
+============================================================
+TABLE 4: PIE CHART VALUES AND PERCENTAGES
+============================================================
+           Group Gender  Count Percentage  Pie_Value   Color
+All Participants   Male    435      31.5%        435 #1f77b4
+All Participants Female    946      68.5%        946 #d62728
+              HC   Male    327      32.7%        327 #1f77b4
+              HC Female    673      67.3%        673 #d62728
+              MS   Male    108      28.3%        108 #1f77b4
+              MS Female    273      71.7%        273 #d62728
+
+Pie chart data saved to: demographics_pie_chart_data.csv
+
+============================================================
+TABLE 5: COMPREHENSIVE DEMOGRAPHIC SUMMARY
+============================================================
+            Metric    All     HC     MS HC_Male HC_Female MS_Male MS_Female
+Total Participants   1381   1000    381     327       673     108       273
+Gender Ratio (M:F) 0.46:1 0.49:1 0.40:1     N/A       N/A     N/A       N/A
+          Mean Age   35.4   34.7   37.3    34.8      34.7    36.6      37.7
+        Median Age   35.0   35.0   37.0    35.0      34.0    34.5      37.0
+            Age SD   10.2   10.1   10.2    10.8       9.8    10.5      10.1
+
+Comprehensive summary table saved to: demographics_comprehensive_summary.csv
+
+================================================================================
+All demographics tables have been generated and saved to CSV files!
+================================================================================
+
+Generated Files Summary:
+- demographics_gender_distribution.csv (Gender counts and percentages)
+- demographics_age_statistics.csv (Detailed age statistics)
+- demographics_age_histogram.csv (Age distribution by bins)
+- demographics_pie_chart_data.csv (Pie chart values and colors)
+- demographics_comprehensive_summary.csv (Overall demographic summary)
+- publication_figure_1_demographics_documentation.txt (Comprehensive documentation)
+- publication_figure_1_demographics.png (Figure)
+
+==================================================
+DEMOGRAPHICS ANALYSIS SUMMARY
+==================================================
+Total Participants: 1381
+Healthy Controls: 1000
+MS Patients: 381
+
+Gender Distribution:
+All Participants - Male: 435 (31.5%), Female: 946 (68.5%)
+HC Group - Male: 327 (32.7%), Female: 673 (67.3%)
+MS Group - Male: 108 (28.3%), Female: 273 (71.7%)
+
+Age Statistics:
+HC_Male: N=327, Mean±SD=34.8±10.8 years, Median[IQR]=35.0[26.0-41.5] years
+HC_Female: N=673, Mean±SD=34.7±9.8 years, Median[IQR]=34.0[27.0-41.0] years
+MS_Male: N=108, Mean±SD=36.6±10.5 years, Median[IQR]=34.5[29.0-45.2] years
+MS_Female: N=273, Mean±SD=37.7±10.1 years, Median[IQR]=37.0[30.0-44.0] years
+
+==================================================
+Figure and tables successfully generated!
+==================================================
+Creating Figure 2: Burden Analysis...
+
+============================================================
+PUBLICATION FIGURE 2: BURDEN ANALYSIS
+============================================================
+    HC: poly-2 fit, R²=0.047, trend rendered 18–60 y (data range 18–74 y)
+    MS: poly-2 fit, R²=0.139, trend rendered 18–60 y (data range 18–68 y)
+    HC: poly-2 fit, R²=0.008, trend rendered 18–60 y (data range 18–74 y)
+    MS: poly-2 fit, R²=0.052, trend rendered 18–60 y (data range 18–68 y)
+    HC: poly-2 fit, R²=0.031, trend rendered 18–60 y (data range 18–74 y)
+    MS: poly-2 fit, R²=0.137, trend rendered 18–60 y (data range 18–68 y)
+    HC: poly-2 fit, R²=0.012, trend rendered 18–60 y (data range 18–74 y)
+    MS: poly-2 fit, R²=0.052, trend rendered 18–60 y (data range 18–68 y)
+    HC: poly-2 fit, R²=0.085, trend rendered 18–60 y (data range 18–72 y)
+    MS: poly-2 fit, R²=0.148, trend rendered 18–60 y (data range 18–60 y)
+    HC: poly-2 fit, R²=0.003, trend rendered 18–60 y (data range 18–72 y)
+    MS: poly-2 fit, R²=0.065, trend rendered 18–60 y (data range 18–60 y)
+
+================================================================================
+COMPREHENSIVE BURDEN ANALYSIS DOCUMENTATION GENERATED
+================================================================================
+Documentation saved to: publication_figure_2_burden_documentation.txt
+File contains detailed explanation of burden analysis figure and methodology.
+
+================================================================================
+TABLE GENERATION: BURDEN ANALYSIS
+================================================================================
+
+============================================================
+TABLE 1: RAW DATA SUMMARY BY PANEL AND GROUP
+============================================================
+Panel                             Panel_Description Group  Total_Participants  Missing_Age  Missing_Ratio    Data_Column
+    A  Ventricular Burden vs Age (All Participants)    HC                1000            0              0 VentricleRatio
+    A  Ventricular Burden vs Age (All Participants)    MS                 381            0              0 VentricleRatio
+    B Total Lesion Burden vs Age (All Participants)    HC                1000            0              0       WMHRatio
+    B Total Lesion Burden vs Age (All Participants)    MS                 381            0              0       WMHRatio
+    C            Ventricular Burden vs Age (Female)    HC                 673            0              0 VentricleRatio
+    C            Ventricular Burden vs Age (Female)    MS                 273            0              0 VentricleRatio
+    D           Total Lesion Burden vs Age (Female)    HC                 673            0              0       WMHRatio
+    D           Total Lesion Burden vs Age (Female)    MS                 273            0              0       WMHRatio
+    E              Ventricular Burden vs Age (Male)    HC                 327            0              0 VentricleRatio
+    E              Ventricular Burden vs Age (Male)    MS                 108            0              0 VentricleRatio
+    F             Total Lesion Burden vs Age (Male)    HC                 327            0              0       WMHRatio
+    F             Total Lesion Burden vs Age (Male)    MS                 108            0              0       WMHRatio
+
+Raw data summary table saved to: burden_analysis_raw_data_summary.csv
+
+============================================================
+TABLE 2: CLEANED DATA AND VALID OBSERVATIONS
+============================================================
+Panel                             Panel_Description Group  Valid_Observations  Excluded_Observations Exclusion_Rate_% Scatter_Color Data_Available
+    A  Ventricular Burden vs Age (All Participants)    HC                1000                      0             0.0%       #2ca02c            Yes
+    A  Ventricular Burden vs Age (All Participants)    MS                 381                      0             0.0%       #ff7f0e            Yes
+    B Total Lesion Burden vs Age (All Participants)    HC                1000                      0             0.0%       #2ca02c            Yes
+    B Total Lesion Burden vs Age (All Participants)    MS                 381                      0             0.0%       #ff7f0e            Yes
+    C            Ventricular Burden vs Age (Female)    HC                 673                      0             0.0%       #2ca02c            Yes
+    C            Ventricular Burden vs Age (Female)    MS                 273                      0             0.0%       #ff7f0e            Yes
+    D           Total Lesion Burden vs Age (Female)    HC                 673                      0             0.0%       #2ca02c            Yes
+    D           Total Lesion Burden vs Age (Female)    MS                 273                      0             0.0%       #ff7f0e            Yes
+    E              Ventricular Burden vs Age (Male)    HC                 327                      0             0.0%       #2ca02c            Yes
+    E              Ventricular Burden vs Age (Male)    MS                 108                      0             0.0%       #ff7f0e            Yes
+    F             Total Lesion Burden vs Age (Male)    HC                 327                      0             0.0%       #2ca02c            Yes
+    F             Total Lesion Burden vs Age (Male)    MS                 108                      0             0.0%       #ff7f0e            Yes
+
+Cleaned data summary table saved to: burden_analysis_cleaned_data_summary.csv
+
+============================================================
+TABLE 3: DESCRIPTIVE STATISTICS FOR AGE BY PANEL AND GROUP
+============================================================
+Panel Group    N Age_Mean Age_SD Age_Median Age_Q25 Age_Q75 Age_IQR Age_Min Age_Max Age_Range
+    A    HC 1000     34.7   10.1       35.0    27.0    41.0    14.0    18.0    74.0      56.0
+    A    MS  381     37.3   10.2       37.0    30.0    45.0    15.0    18.0    68.0      50.0
+    B    HC 1000     34.7   10.1       35.0    27.0    41.0    14.0    18.0    74.0      56.0
+    B    MS  381     37.3   10.2       37.0    30.0    45.0    15.0    18.0    68.0      50.0
+    C    HC  673     34.7    9.8       34.0    27.0    41.0    14.0    18.0    74.0      56.0
+    C    MS  273     37.7   10.1       37.0    30.0    44.0    14.0    18.0    68.0      50.0
+    D    HC  673     34.7    9.8       34.0    27.0    41.0    14.0    18.0    74.0      56.0
+    D    MS  273     37.7   10.1       37.0    30.0    44.0    14.0    18.0    68.0      50.0
+    E    HC  327     34.8   10.8       35.0    26.0    41.5    15.5    18.0    72.0      54.0
+    E    MS  108     36.6   10.5       34.5    29.0    45.2    16.2    18.0    60.0      42.0
+    F    HC  327     34.8   10.8       35.0    26.0    41.5    15.5    18.0    72.0      54.0
+    F    MS  108     36.6   10.5       34.5    29.0    45.2    16.2    18.0    60.0      42.0
+
+Age statistics table saved to: burden_analysis_age_statistics.csv
+
+============================================================
+TABLE 4: DESCRIPTIVE STATISTICS FOR BURDEN RATIOS BY PANEL AND GROUP
+============================================================
+Panel        Measure Group    N Ratio_Mean Ratio_SD Ratio_Median Ratio_Q25 Ratio_Q75 Ratio_IQR Ratio_Min Ratio_Max Ratio_Range  Log_Scale_Used
+    A VentricleRatio    HC 1000      1.165    0.408        1.100     0.877     1.405     0.529     0.258     3.662       3.404           False
+    A VentricleRatio    MS  381      1.808    0.847        1.578     1.212     2.168     0.956     0.146     5.729       5.583           False
+    B       WMHRatio    HC 1000      0.011    0.012        0.007     0.002     0.015     0.013     0.000     0.115       0.115            True
+    B       WMHRatio    MS  381      0.601    0.744        0.282     0.122     0.836     0.713     0.000     4.589       4.589            True
+    C VentricleRatio    HC  673      1.155    0.401        1.096     0.865     1.400     0.535     0.363     2.944       2.580           False
+    C VentricleRatio    MS  273      1.817    0.872        1.594     1.250     2.111     0.861     0.146     5.729       5.583           False
+    D       WMHRatio    HC  673      0.010    0.011        0.007     0.002     0.015     0.013     0.000     0.088       0.088            True
+    D       WMHRatio    MS  273      0.614    0.785        0.278     0.113     0.836     0.723     0.000     4.589       4.589            True
+    E VentricleRatio    HC  327      1.186    0.422        1.105     0.900     1.416     0.516     0.258     3.662       3.404           False
+    E VentricleRatio    MS  108      1.784    0.784        1.537     1.179     2.327     1.148     0.610     4.561       3.950           False
+    F       WMHRatio    HC  327      0.011    0.013        0.008     0.003     0.016     0.013     0.000     0.115       0.115            True
+    F       WMHRatio    MS  108      0.567    0.627        0.338     0.123     0.847     0.724     0.000     3.503       3.502            True
+
+Ratio statistics table saved to: burden_analysis_ratio_statistics.csv
+
+============================================================
+TABLE 5: AGE-BURDEN CORRELATION ANALYSIS
+============================================================
+Panel        Measure Group    N Age_Burden_Correlation Correlation_Strength                 P_Value_Available
+    A VentricleRatio    HC 1000                  0.207                 Weak No (requires statistical testing)
+    A VentricleRatio    MS  381                  0.373             Moderate No (requires statistical testing)
+    B       WMHRatio    HC 1000                  0.085           Negligible No (requires statistical testing)
+    B       WMHRatio    MS  381                  0.224                 Weak No (requires statistical testing)
+    C VentricleRatio    HC  673                  0.172                 Weak No (requires statistical testing)
+    C VentricleRatio    MS  273                  0.370             Moderate No (requires statistical testing)
+    D       WMHRatio    HC  673                  0.103                 Weak No (requires statistical testing)
+    D       WMHRatio    MS  273                  0.227                 Weak No (requires statistical testing)
+    E VentricleRatio    HC  327                  0.269                 Weak No (requires statistical testing)
+    E VentricleRatio    MS  108                  0.384             Moderate No (requires statistical testing)
+    F       WMHRatio    HC  327                  0.055           Negligible No (requires statistical testing)
+    F       WMHRatio    MS  108                  0.215                 Weak No (requires statistical testing)
+
+Correlation analysis table saved to: burden_analysis_correlations.csv
+
+============================================================
+TABLE 6: POLYNOMIAL REGRESSION RESULTS
+============================================================
+Panel Group Regression_Successful  Polynomial_Degree R_Squared Data_Age_Min Data_Age_Max Trend_Age_Max Age_Limit_Config Coefficient_0_(const) Coefficient_1_(linear) Coefficient_2_(quadratic) Age_Normalization_Mean Age_Normalization_SD  Trend_Points Error_Message
+    A    HC                   Yes                  2    0.0475         18.0         74.0          60.0               60              1.144433               0.075352                  0.020365                   34.7                 10.1           100          None
+    A    MS                   Yes                  2    0.1395         18.0         68.0          60.0               60              1.809253               0.316662                 -0.001680                   37.3                 10.2           100          None
+    B    HC                   Yes                  2    0.0081         18.0         74.0          60.0               60              0.010453               0.000902                  0.000264                   34.7                 10.1           100          None
+    B    MS                   Yes                  2    0.0516         18.0         68.0          60.0               60              0.623945               0.171622                 -0.023188                   37.3                 10.2           100          None
+    C    HC                   Yes                  2    0.0312         18.0         74.0          60.0               60              1.143286               0.064171                  0.011241                   34.7                  9.8           100          None
+    C    MS                   Yes                  2    0.1370         18.0         68.0          60.0               60              1.821661               0.323683                 -0.004781                   37.7                 10.1           100          None
+    D    HC                   Yes                  2    0.0119         18.0         74.0          60.0               60              0.010042               0.001040                  0.000304                   34.7                  9.8           100          None
+    D    MS                   Yes                  2    0.0518         18.0         68.0          60.0               60              0.621681               0.180138                 -0.007338                   37.7                 10.1           100          None
+    E    HC                   Yes                  2    0.0847         18.0         72.0          60.0               60              1.150716               0.097780                  0.035301                   34.8                 10.8           100          None
+    E    MS                   Yes                  2    0.1476         18.0         60.0          60.0               60              1.779063               0.299790                  0.005002                   36.6                 10.5           100          None
+    F    HC                   Yes                  2    0.0033         18.0         72.0          60.0               60              0.011343               0.000663                  0.000139                   34.8                 10.8           100          None
+    F    MS                   Yes                  2    0.0650         18.0         60.0          60.0               60              0.643468               0.153683                 -0.077626                   36.6                 10.5           100          None
+
+Regression results table saved to: burden_analysis_regression_results.csv
+
+============================================================
+TABLE 7: SCATTER PLOT DATA SAMPLE (First 20 observations per panel-group)
+============================================================
+Panel Group  Observation  Age Burden_Ratio Scatter_Color
+    A    HC            1 33.0        0.964       #2ca02c
+    A    HC            2 25.0        0.880       #2ca02c
+    A    HC            3 35.0        0.868       #2ca02c
+    A    HC            4 33.0        1.037       #2ca02c
+    A    HC            5 36.0        1.896       #2ca02c
+    A    HC            6 40.0        1.016       #2ca02c
+    A    HC            7 36.0        1.461       #2ca02c
+    A    HC            8 42.0        0.898       #2ca02c
+    A    HC            9 55.0        1.352       #2ca02c
+    A    HC           10 25.0        0.796       #2ca02c
+    A    HC           11 44.0        1.684       #2ca02c
+    A    HC           12 42.0        0.835       #2ca02c
+    A    HC           13 38.0        0.902       #2ca02c
+    A    HC           14 44.0        1.271       #2ca02c
+    A    HC           15 35.0        1.118       #2ca02c
+    A    HC           16 33.0        1.222       #2ca02c
+    A    HC           17 38.0        0.883       #2ca02c
+    A    HC           18 26.0        0.830       #2ca02c
+    A    HC           19 40.0        1.165       #2ca02c
+    A    HC           20 58.0        1.027       #2ca02c
+    A    MS            1 44.0        1.465       #ff7f0e
+    A    MS            2 28.0        1.447       #ff7f0e
+    A    MS            3 29.0        1.444       #ff7f0e
+    A    MS            4 37.0        1.847       #ff7f0e
+    A    MS            5 44.0        0.979       #ff7f0e
+    A    MS            6 43.0        2.624       #ff7f0e
+    A    MS            7 29.0        2.006       #ff7f0e
+    A    MS            8 46.0        2.068       #ff7f0e
+    A    MS            9 37.0        2.067       #ff7f0e
+    A    MS           10 33.0        1.261       #ff7f0e
+    A    MS           11 32.0        1.182       #ff7f0e
+    A    MS           12 51.0        1.476       #ff7f0e
+    A    MS           13 33.0        2.838       #ff7f0e
+    A    MS           14 41.0        4.561       #ff7f0e
+    A    MS           15 27.0        1.163       #ff7f0e
+    A    MS           16 21.0        1.097       #ff7f0e
+    A    MS           17 35.0        2.387       #ff7f0e
+    A    MS           18 40.0        1.819       #ff7f0e
+    A    MS           19 39.0        1.912       #ff7f0e
+    A    MS           20 18.0        0.844       #ff7f0e
+
+... (showing first 40 rows of 240 total scatter plot observations)
+
+Scatter plot data sample saved to: burden_analysis_scatter_data_sample.csv
+
+================================================================================
+All burden analysis tables have been generated and saved to CSV files!
+================================================================================
+
+Generated Files Summary:
+- burden_analysis_raw_data_summary.csv (Raw data overview)
+- burden_analysis_cleaned_data_summary.csv (Data cleaning results)
+- burden_analysis_age_statistics.csv (Age descriptive statistics)
+- burden_analysis_ratio_statistics.csv (Burden ratio descriptive statistics)
+- burden_analysis_correlations.csv (Age-burden correlations)
+- burden_analysis_regression_results.csv (Polynomial regression parameters)
+- burden_analysis_scatter_data_sample.csv (Sample of scatter plot data)
+- publication_figure_2_burden_documentation.txt (Comprehensive documentation)
+- publication_figure_2_burden_analysis.png (Figure)
+
+==================================================
+BURDEN ANALYSIS SUMMARY
+==================================================
+Total Analysis Panels: 6
+
+Measures Analyzed:
+- WMHRatio
+- VentricleRatio
+
+Population Subgroups:
+- Male
+- All
+- Female
+
+Sample Sizes by Panel:
+Panel A (Ventricular Burden vs Age (All Participants)):
+  HC: 1000 valid (0 excluded)
+  MS: 381 valid (0 excluded)
+Panel B (Total Lesion Burden vs Age (All Participants)):
+  HC: 1000 valid (0 excluded)
+  MS: 381 valid (0 excluded)
+Panel C (Ventricular Burden vs Age (Female)):
+  HC: 673 valid (0 excluded)
+  MS: 273 valid (0 excluded)
+Panel D (Total Lesion Burden vs Age (Female)):
+  HC: 673 valid (0 excluded)
+  MS: 273 valid (0 excluded)
+Panel E (Ventricular Burden vs Age (Male)):
+  HC: 327 valid (0 excluded)
+  MS: 108 valid (0 excluded)
+Panel F (Total Lesion Burden vs Age (Male)):
+  HC: 327 valid (0 excluded)
+  MS: 108 valid (0 excluded)
+
+Regression Analysis Results:
+Successful regressions: 12/12 (100.0%)
+
+==================================================
+Figure, tables, and documentation successfully generated!
+==================================================
+Creating Table 1: Baseline Characteristics...
+
+Table 1. Baseline Characteristics of Study Participants
+================================================================================
+                Characteristic     Healthy Controls          MS Patients                p-value
+        Number of participants                 1000                  381                      —
+                  Age (years)ᵃ        34.72 ± 10.14        37.35 ± 10.23 1.9239472530794248e-05
+            Female sex, n (%)ᵇ          673 (67.3%)          273 (71.7%)      0.135719998925275
+       Total Brain area (mm²)ᵃ 219512.12 ± 21932.27 212291.78 ± 20281.39 2.8805696911630832e-08
+        Ventricular ratio (%)ᵃ          1.16 ± 0.41          1.81 ± 0.85  3.687338207018337e-71
+          Total WMH ratio (%)ᶜ    0.01 [0.00, 0.02]    0.28 [0.12, 0.84] 4.443121140688023e-160
+Periventricular WMH ratio (%)ᶜ  55.26 [0.00, 88.89] 54.63 [41.36, 67.53]     0.6281912404402995
+           Deep WMH ratio (%)ᶜ   0.00 [0.00, 32.04] 38.87 [27.91, 51.01]   9.46459117659283e-60
+  Juxtacortical WMH ratio (%)ᶜ   0.00 [0.00, 30.00]    3.72 [1.57, 7.56]   0.051955478184331036
+
+ᵃ Data presented as mean ± standard deviation
+ᵇ Data presented as number (percentage)
+ᶜ Data presented as median [interquartile range]
+p-values calculated using t-test for normally distributed continuous variables,
+Mann-Whitney U test for non-normally distributed variables, and χ² test for categorical variables.
+Table 1 saved to: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4\table1_baseline_characteristics.xlsx
+Analysis summary saved to: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4\analysis_summary.txt
+
+============================================================
+ANALYSIS COMPLETED SUCCESSFULLY!
+============================================================
+All outputs saved to: D:\TEMP_P4\csv_analysis_outputs_no_outlier_v4
+Files generated:
+  - publication_figure_1_demographics.png
+  - publication_figure_2_burden_analysis.png
+  - ventricular_burden_analysis.png
+  - total_lesion_burden_analysis.png
+  - ms_subgroup_analysis.png
+  - correlation_analysis.png
+  - table1_baseline_characteristics.csv
+  - analysis_summary.txt
+
+Analysis completed successfully!
+You can now use the results for your publication.
+
+Key Findings Summary:
+------------------------------
+Age difference (HC vs MS): p = 1.9239472530794248e-05
+Gender distribution difference: p = 0.135719998925275
+
+For detailed results, check the generated files in the output directory.
+
+============================================================
+Analysis pipeline finished.
+
+Process finished with exit code 0
