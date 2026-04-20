@@ -1,0 +1,23 @@
+{
+  "fold_id": 0,
+  "class_scenario": "binary",
+  "preprocessing": "standard",
+  "num_classes": 2,
+  "total_pixels": 88539136,
+  "class_pixel_counts": [
+    79575838,
+    8963298
+  ],
+  "class_frequencies": [
+    0.8987645644068629,
+    0.10123543559313702
+  ],
+  "class_weights": [
+    0.20247246624134155,
+    1.7975275337586585
+  ],
+  "class_names": [
+    "Background",
+    "Specialized GM"
+  ]
+}

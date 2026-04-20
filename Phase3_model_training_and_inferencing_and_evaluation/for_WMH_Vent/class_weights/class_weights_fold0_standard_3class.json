@@ -1,0 +1,27 @@
+{
+  "fold_id": 0,
+  "class_scenario": "3class",
+  "preprocessing": "standard",
+  "num_classes": 3,
+  "total_pixels": 119144448,
+  "class_pixel_counts": [
+    118420367,
+    496384,
+    227697
+  ],
+  "class_frequencies": [
+    0.993922662682528,
+    0.004166236936193619,
+    0.0019111003812783622
+  ],
+  "class_weights": [
+    0.003950922707703595,
+    0.9423307646632635,
+    2.0537183126290333
+  ],
+  "class_names": [
+    "Background",
+    "Ventricles",
+    "Abnormal WMH"
+  ]
+}
