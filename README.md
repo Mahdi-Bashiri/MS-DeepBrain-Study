@@ -5,7 +5,7 @@
 [![TensorFlow 2.11+](https://img.shields.io/badge/TensorFlow-2.11+-orange.svg)](https://tensorflow.org/)
 [![Medical Imaging](https://img.shields.io/badge/domain-Medical%20Imaging-green.svg)](https://github.com/topics/medical-imaging)
 [![Multiple Sclerosis](https://img.shields.io/badge/application-Multiple%20Sclerosis-red.svg)](https://github.com/topics/multiple-sclerosis)
-[![Models on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md.svg)](https://huggingface.co/Bawil/MS-DeepBrain-Study/upload/main)
+[![Models on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md.svg)](https://huggingface.co/Bawil/MS-DeepBrain-Study/tree/main)
 
 
 ## 🧠 Overview
