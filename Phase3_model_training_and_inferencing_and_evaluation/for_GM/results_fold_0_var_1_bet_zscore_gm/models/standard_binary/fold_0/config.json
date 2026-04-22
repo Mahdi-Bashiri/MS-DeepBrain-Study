@@ -1,0 +1,19 @@
+{
+  "variant": 1,
+  "variant_name": "Multiclass_AttentionD_AdaptiveLoss",
+  "preprocessing": "standard",
+  "class_scenario": "binary",
+  "fold_id": 0,
+  "num_classes": 2,
+  "batch_size": 4,
+  "epochs": 20,
+  "lambda_seg": 50,
+  "lambda_gan": 1,
+  "focal_gamma": 0.5,
+  "beta_threshold": 0.25,
+  "beta_smoothness": 0.05,
+  "learning_rate": 0.0002,
+  "beta_1": 0.9,
+  "attention_weight": 2.0,
+  "innovation": "Phase-transitioning segmentation loss (Weighted CE \u2192 Focal Loss)"
+}
